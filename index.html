@@ -1,0 +1,2571 @@
+<!doctype html>
+<html>
+<head>
+  <link rel="stylesheet" href="common/css/reveal.css">
+  <link rel="stylesheet" href="common/css/white.css">
+  <link rel="stylesheet" href="common/css/overrides.css">
+  <script src="common/java/print.js"></script>
+  <title>Meet a Data Scientist</title>
+  <meta charset="UTF-8">
+</head>
+<body>
+
+  <div class="reveal">
+    <div class="slides">
+    
+      <!-- ***
+            * Title Slide Branded
+            * -->
+      <section data-transition="fade" data-background-image="common/assets/img/titlePage.png">
+        <div style="position: absolute; top: 0px; left: 0px;">
+          <div style="color: white; margin-top: 0px; text-align: left; margin-left: 340px; margin-bottom: 23px;" class="fragment fade-out" data-fragment-index=1><strong><br>&nbsp;<br>Meet<br>&nbsp;&nbsp;&nbsp;a<br>&nbsp;Data Scientist</strong></div>
+          <div style="color: black; margin-top: 23px; margin-left: 330px; text-align: left;" class="fragment fade-out" data-fragment-index=1><strong>Institute for Data Science and Computing</strong></div>
+          <div style="color: white; margin-left: 340px; margin-top: 155px; font-size: 60%;">
+            <div style="text-align: left; float: left;">Timothy B Norris, PhD - <a href="mailto:tnorris@miami.edu" style="color: #fff; text-decoration: underline;">tnorris@miami.edu</a><br>December 9 2020</div>
+            <div style="text-align: right; float: right; margin-left: 70px;"><a href="#"  style="color: #fff; text-decoration: underline;">#</a><br><a href="https://github.com/tibbben/data-scientist"  style="color: #fff; text-decoration: underline;">https://github.com/tibbben/data-scientist</a></div>
+          </div>
+        </div>
+        <div style="position: absolute; top: 0px; left: 0px;" class="fragment" data-fragment-index=1>
+          <div style="color: white; margin-top: 0px; text-align: left; margin-left: 340px; margin-bottom: 23px;"><strong><br>John Locke, Political Economy,<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;and the Secret Life<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;of a<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bitpusher</strong></div>
+          <div style="color: black; margin-top: 23px; margin-left: 330px; text-align: left;"><strong>Institute for Data Science and Computing</strong></div>
+          <div style="color: white; margin-left: 340px; margin-top: 155px; font-size: 60%;">
+            <div style="text-align: left; float: left;">Timothy B Norris, PhD - <a href="mailto:tnorris@miami.edu" style="color: #fff; text-decoration: underline;">tnorris@miami.edu</a><br>December 9 2020</div>
+            <div style="text-align: right; float: right; margin-left: 70px;"><a href="#"  style="color: #fff; text-decoration: underline;">#</a><br><a href="https://github.com/tibbben/data-scientist"  style="color: #fff; text-decoration: underline;">https://github.com/tibbben/data-scientist</a></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***
+            * Phil Trans
+            * -->
+      <section data-transition="fade" data-background-image="common/assets/img/1665_phil_trans_vol_i_title.png">
+      </section>
+
+      <!-- ***
+            * Phil Trans
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Philosophical Transactions of the Royal Society</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+
+              <div style="display: inline-block; width: 80%">
+
+                <div style="float: right;" class="fragment" data-fragment-index="1">
+                  <img src="common/assets/img/1665_journal_des_scavans_title.jpg">
+                </div>
+
+                <div style="float: left;">
+                  <img src="common/assets/img/1665_phil_trans_vol_i_title.png">
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            <ul style="list-style: none;">
+              <li>- Oldenburg, Henry (1665). <i>Philosophical Transactions of the Royal Society</i>, March 6th. The Royal Society, London.</li>
+              <li style="margin-top: 7px;" class="fragment" data-fragment-index="1">- de Salio, Denis (1665). <i>Journal des sçavans</i>, January 5. Paris.</li>
+            </ul>
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- **********************************************************************************
+            * Outline
+            * -->
+
+      <section data-transition="fade" data-background-image="common/assets/img/WhereAreWeGoingIDSCBG.jpg">
+        <div style="margin-left: 50px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;">What is Data Science<br>&nbsp;&nbsp;&<br>&nbsp;&nbsp;&nbsp;What is a Data Scientist?</div>
+          <div style="margin-bottom: 200px; font-size: 90%; margin-left: 23px;">
+            <ul>
+                <li><i>Beginnings</i></li>
+                <li><i>Data Curation</i></li>
+                <li><i>A Few Examples</i></li>
+                <li><i>A Political Economy of Data</i></li>
+                <li><i>Some Time for Questions and Discussion</i></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***
+            * Beginnings
+            * -->
+      <section data-transition="fade" data-background-image="common/assets/img/heath_z80.jpg">
+        <div class="fragment" style="border-radius: 13px; padding 13px; color: #00ee00; width: 500px; margin-top: -315px; margin-left: 260px;">
+          <div>
+            <ul style="list-style: none;">
+              <li>> 2.048 MHz Zilog Z80</li>
+              <li>> 16K RAM</li>
+              <li>> 100K 5 1/2 floppy disk</li>
+              <li>> HDOS</li>
+              <li>> BASIC/PASCAL</li>
+              <li>> Serial Port</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section data-transition="fade" data-background-image="common/assets/img/s-l1600.jpg">
+        <div class="fragment" style="border-radius: 13px; padding 13px; color: #ffaa00; width: 500px; margin-top: -265px; margin-left: 260px;">
+          <div>
+            <ul style="list-style: none; font-size: 0.7em;">
+              <li>> Intel 8088 4.7 MHz</li>
+              <li>> 128K RAM</li>
+              <li>> 2 x 360K 5 1/2 floppy disk</li>
+              <li>> MS-DOS</li>
+              <li>> IBM PC Compatible</li>
+              <li>> WordStar, SuperCalc</li>
+            </ul>
+          </div>
+        </div>
+      </section> 
+
+      <section data-transition="fade" data-background-image="common/assets/img/whirled.png">
+      </section>
+      <section data-transition="fade" data-background-image="common/assets/img/sauce.jpg">
+      </section>
+
+      <!-- ***
+            * IUCRP
+            * -->
+      <section data-transition="fade" >
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Beginnings</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="max-width: 90%">
+              <div class="um-template-element" style="display: inline-block;">
+                <div style="width: 45%; float: left; margin-top: 23px;">
+                  <OBJECT classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" HEIGHT=100% id="UCI_button_edits" ALIGN=""><PARAM NAME=movie VALUE="https://nawimaps.com/gallery/images/UCI_button_edits.swf"><PARAM NAME=loop VALUE=false><PARAM NAME=menu VALUE=false><PARAM NAME=quality VALUE=high><PARAM NAME=bgcolor VALUE=#FFFFFF><EMBED src="https://nawimaps.com/gallery/images/UCI_button_edits.swf" loop=false menu=false quality=high bgcolor=#FFFFFF WIDTH="500px" HEIGHT="590px" NAME="UCI_button_edits" ALIGN="" TYPE="application/x-shockwave-flash" PLUGINSPAGE="http://www.macromedia.com/go/getflashplayer"></EMBED></OBJECT>
+                </div>
+                <div style="width: 45%; float: right; padding-top: 40px; padding-right: 42px; font-size: 0.9em;">
+                  <div class="um-template-title">University of California Industry-University Cooperative Research Program</div>
+                  <ul>
+                    <li style="margin-bottom:23px">Data driven maps of legislative districts and research investment</li>
+                    <li style="margin-bottom:23px">Print, presentation (film slides), and on line mapping system</li>
+                    <li>California Legislature, National Labs, and UC Office of the President</li>
+                  </ul> 
+                </div>
+              </div>
+           </div>
+
+          </div>
+          
+          <!-- <script>displayFooter(this);</script> -->
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+        </div>
+      </section> 
+
+      <!-- ***
+            * Maya
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Beginnings</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="max-width: 90%">
+              <div class="um-template-element" style="display: inline-block;">
+                <div style="width: 48%; float: left;">
+                  <img src="common/assets/img/mayacover.png">
+                </div>
+                <div style="width: 48%; float: right; padding-top: 80px; padding-right: 42px; font-size: 0.9em;">
+                  <div class="um-template-title">GeoMap - UC Berkeley Geography</div>
+                  <ul>
+                    <li style="margin-bottom:23px">Participatory Mapping</li>
+                    <li>Rights and resources</li>
+                    <li>International courts, World Bank, Indian Law Resource Center</li>
+                  </ul> 
+                </div>
+              </div>
+            </div>
+
+          </div>
+          
+          <!-- <script>displayFooter(this);</script> -->
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <section data-transition="fade">
+        <div style="margin-top: -50px;">
+          <div style="width: 48%; float: left">
+            <img src="common/assets/img/originalmap.jpg">
+          </div>
+          <div style="width: 48%; float: right" class="fragment">
+            <img src="common/assets/img/Maya_LandUse.jpg">
+          </div>
+        </div>
+      </section>
+
+      <section data-transition="fade">
+        <img src="common/assets/img/t19SanAntonio.jpg" style="margin-top: -23px;">
+      </section>
+
+      <!-- ***
+            * Huayhuash
+            * -->
+      <section data-transition="fade">
+        <img src="common/assets/img/AntipodePeru2014x1532.jpg" style="margin-top: -23px;">
+      </section>
+
+      <section data-transition="fade" data-background-image="common/assets/img/huayhuash.jpg">
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="max-width: 100%">
+              <img src="common/assets/img/H1990.png" style="width: 1064px; height: 800px; max-height: 800px;">
+            </div>
+
+          </div>
+
+       </div>
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="max-width: 100%">
+              <img src="common/assets/img/H1996.png" style="width: 1064px; height: 800px; max-height: 800px;">
+            </div>
+
+          </div>
+
+       </div>
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="max-width: 100%">
+              <img src="common/assets/img/H2001.png" style="width: 1064px; height: 800px; max-height: 800px;">
+            </div>
+
+          </div>
+
+       </div>
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="max-width: 100%">
+              <img src="common/assets/img/H2004.png" style="width: 1064px; height: 800px; max-height: 800px;">
+            </div>
+
+          </div>
+
+       </div>
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="max-width: 100%">
+              <img src="common/assets/img/H2008.png" style="width: 1064px; height: 800px; max-height: 800px;">
+            </div>
+
+          </div>
+
+       </div>
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="max-width: 100%">
+              <img src="common/assets/img/H2011.png" style="width: 1064px; height: 800px; max-height: 800px;">
+            </div>
+
+          </div>
+
+       </div>
+      </section>
+
+      <section data-transition="fade" data-background-image="common/assets/img/pres.jpg">
+      </section>
+
+      <section data-transition="fade" data-background-image="common/assets/img/mahuay.jpg">
+      </section>
+
+      <section data-transition="fade" data-background-image="common/assets/img/uramaza.jpg">
+      </section>
+
+      <section data-transition="fade" data-background-image="common/assets/img/cartos.jpg">
+      </section>
+
+      <section data-transition="fade" data-background-image="common/assets/img/llamac.jpg">
+      </section>
+
+      <section data-transition="fade" data-background-image="common/assets/img/queropalca.jpg">
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-content-containter">
+            <div class="um-template-content" style="max-width: 100%">
+              <img src="common/assets/img/2011_Nov_HuayhuashZonificacion_PPT_PACLLON_MANO.png" style="width: 1064px; height: 800px; max-height: 800px; margin-left: 90px;">
+            </div>
+          </div>
+          <div style="position: absolute; left: 13px; top: 200px;">
+            <img src="common/assets/img/2011_Nov_HuayhuashZonificacion_PPT_PACLLON_LOCATOR.png" style="max-width: 160px;">
+          </div>
+       </div>
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-content-containter">
+            <div class="um-template-content" style="max-width: 100%">
+              <img src="common/assets/img/2011_Nov_HuayhuashZonificacion_PPT_PACLLON.png" style="width: 1064px; height: 800px; max-height: 800px; margin-left: 90px;">
+            </div>
+          </div>
+          <div style="position: absolute; left: 13px; top: 200px;">
+            <img src="common/assets/img/2011_Nov_HuayhuashZonificacion_PPT_PACLLON_LOCATOR.png" style="max-width: 160px;">
+          </div>
+       </div>
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-content-containter">
+            <div class="um-template-content" style="max-width: 100%">
+              <img src="common/assets/img/2011_Nov_HuayhuashZonificacion_PPT_PACLLON_VIGENTE.png" style="width: 1064px; height: 800px; max-height: 800px; margin-left: 90px;">
+            </div>
+          </div>
+          <div style="position: absolute; left: 13px; top: 200px;">
+            <img src="common/assets/img/2011_Nov_HuayhuashZonificacion_PPT_PACLLON_LOCATOR.png" style="max-width: 160px;">
+          </div>
+       </div>
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-content-containter">
+            <div class="um-template-content" style="max-width: 100%">
+              <img src="common/assets/img/2011_Nov_HuayhuashZonificacion_PPT_PACLLON_CDM.png" style="width: 1064px; height: 800px; max-height: 800px; margin-left: 90px;">
+            </div>
+          </div>
+          <div style="position: absolute; left: 13px; top: 200px;">
+            <img src="common/assets/img/2011_Nov_HuayhuashZonificacion_PPT_PACLLON_LOCATOR.png" style="max-width: 160px;">
+          </div>
+       </div>
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-content-containter">
+            <div class="um-template-content" style="max-width: 100%">
+              <img src="common/assets/img/2011_Nov_HuayhuashZonificacion_PPT_ZONIFICACION_ADENTRO.png" style="width: 1064px; height: 800px; max-height: 800px;">
+            </div>
+          </div>
+       </div>
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-content-containter">
+            <div class="um-template-content" style="max-width: 100%">
+              <img src="common/assets/img/2011_Nov_HuayhuashZonificacion_PPT_ZONIFICACION_ADENTRO_VIGENTE.png" style="width: 1064px; height: 800px; max-height: 800px;">
+            </div>
+          </div>
+       </div>
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-content-containter">
+            <div class="um-template-content" style="max-width: 100%">
+              <img src="common/assets/img/2011_Nov_HuayhuashZonificacion_PPT_ZONIFICACION_ADENTRO_CDM_2011.png" style="width: 1064px; height: 800px; max-height: 800px;">
+            </div>
+          </div>
+        </div>
+        <div style="position: absolute; top: 230px; left: 410px; border-radius: 13px; border: 7px solid #f00; min-width: 50px; min-height: 80px;" class="fragment"></div>
+      </section>
+
+      <section data-transition="fade">
+        <div style="margin-top: -50px;">
+          <div style="width: 48%; float: left">
+            <img src="common/assets/img/HuayllapaActaColindancia_SUNARP_Barranca.jpg">
+          </div>
+          <div style="width: 48%; float: right">
+            <img src="common/assets/img/PacllonActaColindancia_SUNARP_Huaraz.jpg" style="max-height: 800px;">
+          </div>
+        </div>
+        <div style="position: absolute; top: 390px; right: 182px; border-radius: 13px; border: 7px solid #f00; min-width: 80px; min-height: 30px;" class="fragment"></div>
+        <div style="position: absolute; top: 425px; right: 172px;" class="fragment">
+          <div style="position: relative; top: 1px; left: 333px; border-radius: 13px; border: 7px solid #f90; width: 20px; height: 20px;"></div>
+          <div style="position: relative; top: 4px; left: 0px; border-radius: 13px; border: 7px solid #f90; width: 350px;  height: 25px;"></div>
+        </div>
+      </section>
+
+      <section data-transition="fade"  data-background-image="common/assets/img/AppGeogBorderColor.jpg">
+      </section>
+
+      <section data-transition="fade"  data-background-image="common/assets/img/lima2000.jpg">
+        <div style="position: absolute; top: 350px; left: 260px; border-radius: 13px; background-color: rgba(255,255,255,0.8); border: 1px solid #666; padding: 23px;" class="fragment">
+          <ul style="font-size: 0.8em;">
+            <li>web map
+              <ul style="font-size: 0.8em;">
+                <li>~ 200,000 records in streets + other features</li>
+                <li>~ 120,000 map tiles -> 4+ days to render on P4</li>
+                <li>python + php + MapServer</li>
+              </ul>
+            </li>
+            <li>search engine
+              <ul style="font-size: 0.8em;">
+                <li>custom address normalizer with synonyms and common errors</li>
+                <li>custom geocoder for Lima2000 address data</li>
+                <li>php + mysql</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- *******************************************************************************
+            * Outline - Begin Data Curation
+            * -->
+
+      <section data-transition="fade" data-background-image="common/assets/img/WhereAreWeGoingIDSCBG.jpg">
+        <div style="margin-left: 50px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;">What is Data Science<br>&nbsp;&nbsp;&<br>&nbsp;&nbsp;&nbsp;What is a Data Scientist?</div>
+          <div style="margin-bottom: 200px; font-size: 90%; margin-left: 23px;">
+            <ul>
+                <li style="color: #aaa;"><i>Beginnings</i></li>
+                <li><b><i>Data Curation</i></b></li>
+                <li style="color: #aaa;"><i>A Few Examples</i></li>
+                <li style="color: #aaa;"><i>A Political Economy of Data</i></li>
+                <li style="color: #aaa;"><i>Some Time for Questions and Discussion</i></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***
+            * Federal Move
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+              <div class="um-template-title" style="margin-bottom: 0px !important;">Federal Movement Towards Open Data</div>
+              <img src="common/assets/img/federalmovement.png" style="max-width: 100% !important;">
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+              Adapted from: Whitmire, Amanda L. (2014). Research Data Management Curriculum, Lecture 2: Introduction to Research Data Management. Oregon State University Libraries. <a target="_blank" href="http://figshare.com/articles/GRAD521_Research_Data_Management_Lectures/1003835">http://figshare.com/articles/GRAD521_Research_Data_Management_Lectures/1003835</a>
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            * The Data Revolution
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+
+              <div style="display: inline-block; text-align: left; font-size: 75%; width: 100%">
+
+                <div style="margin-top: 7px;">
+                  "It is an unfortunate accident of history that the term <i>datum</i> ... rather than <i>captum</i> ... should have come to symbolize the unit-phenomenon in science. For science deals, not with 'that which has been given' by nature to the scientist, but with 'that which has been taken' or selected from nature by the scientist in accordance with his [sic] purpose." (Kitchin 2014, p. 2)
+                </div>
+
+                <div style="margin-top: 50px; text-align: center;">
+                  <img src="common/assets/img/dataRevolutionHeader.jpg" style="max-width: 80%;">
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            Cited in Kitchin, R. (2014). <i>The Data Revolution</i>. Washington DC: SAGE from Jensen. H.E. (1950). 'Editorial Note' in H. Becker (1952). <i>Through Values to Social Interpretation</i>. Duke University Press, Durham, pp. ix.
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            * The Data Abstraction
+            * -->
+      <section data-transition="fade" >
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="font-size: 100% !important; max-width: 100% !important; width: 100% !important;">
+                <div class="um-template-element" style="display: inline-block; max-width: 100%; width: 100%">
+                  <div style="float: right; top: 0px; font-weight: bold; font-size: 110%; position: relative; right: 150px;">Some Useful Abstractions</div>
+                  <div style="width: 45%; float: left; height: 500px;">&nbsp;</div>
+                  <div class="fragment" data-fragment-index="3" style="width: 45%; float: right; font-size: 80%; line-height: normal; text-align: right; position: relative; right: 150px;">
+                  <br><br>“Information is not knowledge.<br>
+                      Knowledge is not wisdom.<br>
+                      Wisdom is not truth.<br>
+                      Truth is not beauty.<br>
+                      Beauty is not love.<br>
+                      Love is not music.<br>
+                      Music is THE BEST.”<br><br>
+                      ― Frank Zappa&nbsp;&nbsp;
+                  </div>
+                </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+        </div>
+        <div style="position: absolute; top: 70px; left: 50px;"><img src="common/assets/img/PyramidNoBaseNoWords.png" style="max-width: 700px;"></div>
+        <div style="position: absolute; top: 70px; left: 50px;"><img src="common/assets/img/PyramidNoBase.png" style="max-width: 700px;" class="fragment" data-fragment-index="1"></div>
+        <div style="position: absolute; top: 70px; left: 50px;"><img src="common/assets/img/Pyramid.png" style="max-width: 700px;" class="fragment" data-fragment-index="2"></div>
+      </section>
+
+      <!-- ***
+            * Data Curation
+            * -->
+      <section>
+      
+        <section data-background-image="common/assets/img/curation/curation01.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation02.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation03.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation04.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation05.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation06.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation07.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation08.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation09.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation10.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation11.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation12.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation13.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation14.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation15.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation16.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation17.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation18.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation19.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation20.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation21.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation22.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation23.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation24.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation25.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation26.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation27.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation28.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation29.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation30.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation31.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation32.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation33.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation34.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation35.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation36.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation37.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation38.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation39.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation40.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+        <section data-background-image="common/assets/img/curation/curation01.jpg" data-transition="fade"><div style="width: 100%; text-align: center; margin: 750px auto 0px auto; font-size: 50%;"><a href="https://www.youtube.com/watch?v=yKvxWk5wwUU" style="color: #ddd">https://www.youtube.com/watch?v=yKvxWk5wwUU</a></div></section>
+
+      </section>
+
+      <!-- ***
+            * Data Curation Initiative
+            * -->
+      <!-- <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>UM Data Curation Initiative</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+              <div class="um-template-title" style="margin-bottom: 72px !important;">The UM Data Curation Initiative</div>
+              <div class="um-template-element">
+                <div style="display: inline-block; font-size: 85%; text-align: left;">
+                  <div style="float: left;">Libraries<br>Office of Research<br>Information Technology<br>Center For Computational Science</div>
+                  <div style="float: left; font-size: 550%; margin: 55px 42px 0 42px; font-family: courier new">}</div>
+                  <div style="float: right; margin-top: 17px; font-size: 90%">Conversation started in 2009<br>CLIR postdoctoral Fellow 2014-16<br>Emerging e-science at UM</div>
+                </div>
+                <div class="fragment" style="display: inline-block; font-size: 85%; font-weight: bold; text-align: left; margin-top: 42px; margin-left: 0px;">
+                  <div style="float: left; margin-right: 23px"><span style="margin-left: 230px; font-size: 200%;">/</span><br>Environmental Scan</div>
+                  <div style="float: right; margin-left: 83px"><span style="margin-left: 0px; font-size: 200%;">\</span><br>Pilot Projects<br>Recommendations</div>
+                </div> 
+              </div>
+            </div>
+
+          </div> -->
+          
+          <!-- <script>displayFooter(this);</script> -->
+          <!-- <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section> -->
+
+      <!-- ***
+            * Key Observations
+            * -->
+      <!-- <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+
+              <div style="display: inline-block; text-align: left; font-size: 90%; width: 100%">
+
+                <div style="float: left; max-width: 75%; width: 75%; margin-left: 40px !important; margin-top: -85px;">
+                  <div class="um-template-title">Environmental Scan (2015)</div>
+                  <div class="um-template-element">
+
+                    <ul style="list-style: none;">
+                      <li>Key Observations</li>
+                      <ul style="font-size: 80%;">
+                        <li><i>Long-term curation is lacking</i></li>
+                        <li><i>Human resources are a limiting factor</i></li>
+                        <li><i>Data management crosses personal and professional boundaries</i></li>
+                        <li><i>There is a desire to share, but current frameworks are not working</i></li>
+                      </ul>
+                      <li style="margin-top: 23px;">Key Takeaways</li>
+                      <ul style="font-size: 80%;">
+                        <li>Few norms and guidelines for data</li>
+                        <li>Capture the future: teach good data management habits</li>
+                        <li style="margin-top: 13px;">Data curation is a social problem, not technical</li>
+                      </ul>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <div style="float: right; max-width: 25%">
+                  
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+              Norris, T. and S. Shreeves (2017). <i>University of Miami Data Curation Initiative: Report and Recommendations</i>. University of Miami Libraries.
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+        <div style="position: absolute; right: 100px; top: 52px; font-size: 40%; line-height: 115% !important; text-align: right; color: #aaa; width: 90%;">
+          <div style="float: right; margin-left: 23px !important;"><img src="common/assets/img/No-35-medulla-td-Tomato-0_63-lateral_15-06-27_Ultra_C00_xyz-Table-Z0000-c_004.jpg" style="max-width: 220px;"></div>
+          <div style="position: relative; top: 500px; width: 90%; margin-right: 23px !important;"><i>No-35-medulla-td-Tomato-0_63-lateral_15-06-27_Ultra_C00_xyz-Table-Z0000-c_004.jpg<br>Sensory nerve fibers in the spinal cord (upper) and leaving in a peripheral nerve (lower). Dr. Pantelis Tsoulfas (2016).</i></div>
+        </div>
+      </section> -->
+
+      <!-- ***
+            * Curation definition
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+
+              <div class="um-template-title">What is data curation?</div>
+              <div class="um-template-element" style="text-align: left;">
+
+                <div style="font-size: 100%; width: 70%; margin: 0px auto 0px auto;">
+                  “The encompassing work and actions taken by <b>curators of a data repository</b> in order to provide meaningful and enduring access to data.”
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+              Data Curation Network: Data Curation Terms & Activities. <a href="http://hdl.handle.net/11299/188638">http://hdl.handle.net/11299/188638</a>
+          </div>
+
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            * Data Policy Scan
+            * -->
+      <!--<section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>UM Environmental Scan</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="max-width: 85% !important;">
+              <div class="um-template-title">Data Policies at Peer Institutions</div>
+              <div style="font-size: 45% !important; line-height: normal !important;">
+                <table border=0 cellpadding=0 cellspacing=0 class="whitetable">
+                 <tr height=12 style="vertical-align: bottom !important; border-bottom: 1px solid #333 !important; font-weight: bold;">
+                  <td height=6 style="width:200pt; vertical-align: bottom !important;">Peer Institutions</td>
+                  <td style='width:30pt; vertical-align: bottom !important;'>last revised</td>
+                  <td style='width:75pt; vertical-align: bottom !important;'>responsible party</td>
+                  <td style='width:75pt; vertical-align: bottom !important;'>ownership stated</td>
+                  <td style='width:85pt; vertical-align: bottom !important;'>&quot;research data&quot; defined</td>
+                  <td style='width:85pt; vertical-align: bottom !important;'>data retention (min.)</td>
+                  <td style='width:20pt; vertical-align: bottom !important;'>data access</td>
+                  <td style='width:20pt; vertical-align: bottom !important;'>PI moves</td>
+                  <td style='width:20pt; vertical-align: bottom !important;'>disputes</td>
+                  <td style='width:20pt; vertical-align: bottom !important;'>take-down</td>
+                  <td style='width:89pt; vertical-align: bottom !important;'>notes</td>
+                 </tr>
+                 <tr height=6>
+                  <td height=6>Case Western Reserve University</td>
+                  <td>2000</td>
+                  <td>X</td>
+                  <td>&nbsp;</td>
+                  <td>X</td>
+                  <td>3 years</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td style='border-top:none'>&nbsp;</td>
+                 </tr>
+                 <tr height=6>
+                  <td height=17 style='height:13.0pt'>New York University</td>
+                  <td class=xl70>2010</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>3 years</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td></td>
+                  <td>X</td>
+                  <td></td>
+                 </tr>
+                 <tr height=6>
+                  <td height=17 style='height:13.0pt'>University of Rochester</td>
+                  <td class=xl70>2014</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>3 years</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                 </tr>
+                 <tr height=6 style="background-color: #eee;">
+                  <td height=17 class=xl74 style='height:13.0pt'>University of Miami</td>
+                  <td class=xl75>2019</td>
+                  <td class=xl74>?</td>
+                  <td class=xl74>X</td>
+                  <td class=xl74></td>
+                  <td class=xl74>7 years</td>
+                  <td class=xl74></td>
+                  <td class=xl74></td>
+                  <td class=xl74></td>
+                  <td class=xl74></td>
+                  <td class=xl74>in faculty manual</td>
+                 </tr>
+                 <tr height=6>
+                  <td height=17 style='height:13.0pt'>Emory University</td>
+                  <td class=xl70>2007</td>
+                  <td>X</td>
+                  <td></td>
+                  <td></td>
+                  <td>7 years</td>
+                  <td></td>
+                  <td>X</td>
+                  <td></td>
+                  <td></td>
+                  <td>in faculty manual</td>
+                 </tr>
+                 <tr height=6>
+                  <td height=17 style='height:13.0pt'>Brandeis University</td>
+                  <td class=xl70>2003</td>
+                  <td></td>
+                  <td>X</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>in IP policy</td>
+                 </tr>
+                 <tr height=6>
+                  <td height=17 style='height:13.0pt'>University of Southern California</td>
+                  <td class=xl70>2001</td>
+                  <td></td>
+                  <td>X</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>in IP policy<span style='mso-spacerun:yes'> </span></td>
+                 </tr>
+                 <tr height=6>
+                  <td height=17 style='height:13.0pt'>Carnegie Mellon University</td>
+                  <td class=xl70></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                 </tr>
+                 <tr height=6>
+                  <td height=17 style='height:13.0pt'>Syracuse University</td>
+                  <td class=xl70></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                 </tr>
+                 <tr height=6>
+                  <td height=17 style='height:13.0pt'>Tulane University</td>
+                  <td class=xl70></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                 </tr>
+                 <tr height=6>
+                  <td height=6>Vanderbilt University</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                 </tr>
+                 <tr height=12 style='mso-height-source:userset;height:9.0pt'>
+                  <td height=12 style='height:9.0pt'></td>
+                  <td class=xl70></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                 </tr>
+                 <tr height=6 style="border-bottom: 1px solid #333 !important; font-weight: bold;">
+                  <td height=17 class=xl73 style='height:13.0pt'>Non-peer Institutions</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                 </tr>
+                 <tr height=6>
+                  <td height=17 style='height:13.0pt'>University of Kentucky</td>
+                  <td class=xl70>2011</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>5 years</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td></td>
+                 </tr>
+                 <tr height=6>
+                  <td height=17 style='height:13.0pt'>Johns Hopkins University</td>
+                  <td class=xl70>2008</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>5 years</td>
+                  <td>X</td>
+                  <td></td>
+                  <td></td>
+                  <td>X</td>
+                  <td></td>
+                 </tr>
+                 <tr height=6>
+                  <td height=17 style='height:13.0pt'>Duke University</td>
+                  <td class=xl70>2007</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>5 Years</td>
+                  <td>X</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                 </tr>
+                 <tr height=6>
+                  <td height=17 style='height:13.0pt'>The University of Edinburgh</td>
+                  <td class=xl70>2011</td>
+                  <td>X</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                  <td>X</td>
+                  <td></td>
+                  <td></td>
+                  <td>X</td>
+                  <td>not really a policy</td>
+                 </tr>
+                 <tr height=6>
+                  <td height=17 style='height:13.0pt'>University of Pittsburg</td>
+                  <td class=xl70>2009</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>7 years</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td></td>
+                  <td></td>
+                  <td></td>
+                 </tr>
+                 <tr height=6>
+                  <td height=17 style='height:13.0pt'>Pennsylvania State</td>
+                  <td class=xl70>2003</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>5 years</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td></td>
+                  <td></td>
+                  <td>set of guidelines</td>
+                 </tr>
+                 <tr height=6>
+                  <td height=6>Stanford</td>
+                  <td>1997</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>3 years</td>
+                  <td>X</td>
+                  <td>X</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                  <td>&nbsp;</td>
+                 </tr>
+                </table>
+            </div>
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+              Norris, T. and S. Shreeves (2017). <i>University of Miami Data Curation Initiative: Report and Recommendations</i>. University of Miami Libraries.
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section> -->
+
+      <!-- ***
+            * Data Ownership
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="margin-bottom: 72px !important;">
+              <div class="um-template-title" style="margin-bottom: 42px !important;">Who Owns Your Data?</div>
+              <div style="text-align: left;"><p>“The PI owns the data.”</p><p>“The university owns the data.”</p><p>“Nobody can own it; data isn’t copyrightable.”</p><p class="fragment">... <strong>So who really owns research data? Well, the short answer is “it depends.”</strong> (emphasis in original).</p></div>
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+              Fortney, Katie (2016). "Who Owns Your Data". University of California Office of Scholarly Communication [ webpage ]. Accessed from <a target="_blank" href="https://osc.universityofcalifornia.edu/2016/09/who-owns-your-data/">https://osc.universityofcalifornia.edu/2016/09/who-owns-your-data/</a> on July 20th 2019.
+          </div>
+
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            * UM Data Ownership and Responsibility
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+
+              <div class="um-template-title">UM and Data Ownership</div>
+              <div class="um-template-element" style="text-align: left;">
+
+                <div style="font-size: 80%;">
+                  <b>Innovations:</b> patentable or un-patentable inventions, discoveries, processes, compositions, research tools, <b>data</b>, ideas, <b>databases</b>, know-how, copyrightable works that are not scholarly or artistic Creations and tangible property, including biological organisms, engineering prototypes, drawings, and software created, conceived or made by Applicable Personnel within their normal duties (including clinical duties), course of studies, field of research or scholarly expertise or making more than Incidental Use of University’s resources. (p. 141)
+                </div>
+
+                <div style="font-size: 80%; margin-top: 42px;">
+                  <b>3.3</b> Innovations are <b>owned by the University</b>; revenues derived from commercialization of Innovations will be shared with the Applicable Personnel as detailed in Section VI. (p. 142)
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+              University of Miami Faculty Manual 2018 - 2019. <a href="https://fs.miami.edu/_assets/pdf/facultysenate/Documents/FacultyManual.pdf">https://fs.miami.edu/_assets/pdf/facultysenate/Documents/FacultyManual.pdf</a>
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            * UM Data Definition
+            * -->
+      <!-- <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>UM Environmental Scan</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+
+              <div class="um-template-title">Possible Definition of Research Data</div>
+              <div class="um-template-element">
+
+                <div style="font-size: 85%; line-height: 130%; text-align: left;">
+                  The term “Research Data” in this document refers to information recorded and/or collected for research performed at or under the auspices of the University regardless of the form or the media upon which it is recorded. This term includes, but is not limited to, computer programs (code and documentation), computer databases, instrumental outputs, raw numerical results, original biological or environmental samples, photographs, digital images, films, protocols, graphs, and other deliverables produced under sponsored agreements. Research Data also includes any records related to the design, conduct or reporting of the research that would be necessary to reconstruct the reported research results. Research data can be intangible (statistics, findings, conclusions, etc.) and tangible (notebooks, printouts, etc.).</div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+              Norris, T. and S. Shreeves (2017). <i>University of Miami Data Curation Initiative: Report and Recommendations</i>. University of Miami Libraries.
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section> -->
+
+      <!-- ***
+            * Useful Abstractions
+            * -->
+      <!-- <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>UM Environmental Scan</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="max-width: 70%;">
+
+              <div class="um-template-element" style="display: inline-block;">
+
+                <div class="um-template-title" style="float: right;">Some Useful Abstractions</div>
+                <div style="width: 55%; float: left;"><img src="common/assets/img/Pyramid.png" style="max-width: 110% !important;"></div>
+                <div class="fragment" style="width: 40%; float: right; font-size: 80%; line-height: normal; text-align: right;">
+                <br><br>“Information is not knowledge.<br>
+                    Knowledge is not wisdom.<br>
+                    Wisdom is not truth.<br>
+                    Truth is not beauty.<br>
+                    Beauty is not love.<br>
+                    Love is not music.<br>
+                    Music is THE BEST.”<br><br>
+                    ― Frank Zappa&nbsp;&nbsp;
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section> -->
+
+      <!-- ***
+            * What?!
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="max-width: 70%;">
+
+              <div class="um-template-element" style="display: inline-block;">
+
+                <div style="font-size: 800%; text-align: center;">!?</div>
+
+              </div>
+
+            </div>
+
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            * Sharing 2011
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+              <div class="um-template-title">Researcher perspectives on sharing</div>
+              <div class="um-template-element">
+                <table border=0 cellspacing=0 cellpadding=0 style="font-size: 80%;">
+                 <tr style='height:27.25pt'>
+                  <td valign=bottom style='width:500px;background:white;padding:1.55pt .8pt 1.55pt .8pt;  height:27.25pt; border: none !important;'></td>
+                  <td style='width:250px;background:white;padding:.8pt .8pt 0in .8pt;  height:27.25pt; border: none !important;'></td>
+                  <td style='width:150px;background:white;padding:.8pt .8pt 0in .8pt;  height:27.25pt; border: none !important;'></td>
+                 </tr>
+                 <tr style='height:27.25pt; font-weight: bold;'>
+                  <td valign=bottom style='width:500px;background:white;padding:1.55pt .8pt 1.55pt .8pt;  height:27.25pt'>Sharing analysis scripts and data sets</td>
+                  <td style='width:250px;background:white;padding:.8pt .8pt 0in .8pt;  height:27.25pt'>Frequency</td>
+                  <td style='width:150px;background:white;padding:.8pt .8pt 0in .8pt;  height:27.25pt'>percent (valid)</td>
+                 </tr>
+                 <tr style='height:20.25pt; border: none !important;'>
+                  <td valign=bottom style='width:500px;background:white;padding:1.55pt .8pt 1.55pt .8pt;  height:27.25pt; border: none !important;'>1. Willing to share publicly</td>
+                  <td style='width:250px;background:white;padding:.8pt .8pt 0in .8pt;  height:27.25pt; border: none !important;'>120</td>
+                  <td style='width:150px;background:white;padding:.8pt .8pt 0in .8pt;  height:27.25pt; border: none !important;'>25.9%</td>
+                 </tr>
+                 <tr style='height:20.25pt; border: none !important;'>
+                  <td valign=bottom style='width:500px;background:white;padding:1.55pt .8pt 1.55pt .8pt;  height:27.25pt; border: none !important;'>2. Willing to share under access control</td>
+                  <td style='width:250px;background:white;padding:.8pt .8pt 0in .8pt;  height:27.25pt; border: none !important;'>98</td>
+                  <td style='width:150px;background:white;padding:.8pt .8pt 0in .8pt;  height:27.25pt; border: none !important;'>21.1%</td>
+                 </tr>
+                 <tr style='height:20.25pt; border: none !important;'>
+                  <td valign=bottom style='width:500px;background:white;padding:1.55pt .8pt 1.55pt .8pt;  height:27.25pt; border: none !important;'>3. Willing to share only on request</td>
+                  <td style='width:250px;background:white;padding:.8pt .8pt 0in .8pt;  height:27.25pt; border: none !important;'>163</td>
+                  <td style='width:150px;background:white;padding:.8pt .8pt 0in .8pt;  height:27.25pt; border: none !important;'>35.1%</td>
+                 </tr>
+                 <tr style='height:20.25pt; border: none !important;'>
+                  <td valign=bottom style='width:500px;background:white;padding:1.55pt .8pt 1.55pt .8pt;  height:27.25pt; '>4. Not willing to share</td>
+                  <td style='width:250px;background:white;padding:.8pt .8pt 0in .8pt;  height:27.25pt; '>83</td>
+                  <td style='width:150px;background:white;padding:.8pt .8pt 0in .8pt;  height:27.25pt; '>17.9%</td>
+                 </tr>
+                 <tr style='height:20.25pt; border: none !important; font-weight: bold;'>
+                  <td valign=bottom style='width:500px;background:white;padding:1.55pt .8pt 1.55pt .8pt;  height:27.25pt; '>Sum</td>
+                  <td style='width:250px;background:white;padding:.8pt .8pt 0in .8pt;  height:27.25pt; '>464</td>
+                  <td style='width:150px;background:white;padding:.8pt .8pt 0in .8pt;  height:27.25pt; '>100%</td>
+                 </tr>
+                 <tr style='height:20.25pt; border: none !important;'>
+                  <td valign=bottom colspan=3 style='width:500px;background:white;padding:1.55pt .8pt 1.55pt .8pt;  height:27.25pt; font-size: 70%;'>Source: SOEP User Survey 2013, own calculations</td>
+                 </tr>
+                </table>
+              </div>
+              <div class="fragment" style="position: absolute; top: 195px; left: -110px; text-align: right; font-size: 80%; line-height: normal; background-color: #ffff;">Age<br>Control<br>Resources<br>Returns<br>Discipline</div>
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            adapted from <a target="_blank" href="https://dx.doi.org/10.1371/journal.pone.0118053.t005">10.1371/journal.pone.0118053.t005</a> in Fecher B, Friesike S, Hebing M (2015) What Drives Academic Data Sharing? <i>PLoS ONE</i> 10(2): e0118053. <a href="https://doi.org/10.1371/journal.pone.0118053">10.1371/journal.pone.0118053</a>. Also reflected in Elsevier and the Centre for Science and Technology Studies (CWTS) (2017). <i>Open Data: The Researcher Perspective</i>. Elseveier and CWTS. <a href="https://www.elsevier.com/about/open-science/research-data/open-data-report">https://www.elsevier.com/about/open-science/research-data/open-data-report</a>.
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+        </div>
+        <aside class="notes">
+          Really spend some time on this, let people try to guess why some people share and others not. Then discuss the results from the paper.
+        </aside>
+      </section>
+
+      <!-- ***
+            * Sharing Trends
+            * -->
+      <!--<section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+
+              <div style="display: inline-block; text-align: left; font-size: 90%; width: 100%">
+
+                <div class="um-template-element" style="float: right; max-width: 50%; font-sixe: 90%;">
+
+                  <ul style="list-style: none;">
+                    <li style="font-size: 80%;">Researcher Sharing Practices</li>
+                    <ul style="font-size: 70%;">
+                      <li><i>Lack of time and money</i></li>
+                      <li><i>Lack of credit in tenure process</i></li>
+                      <li><i>Political and geographical contexts</i></li>
+                      <li><i>Assumed value of shared data</i></li>
+                      <li><i>Fear of data misuse</i></li>
+                      <li><i>Current status in career trajectory (age)</i></li>
+                    </ul>
+                    <li style="margin-top: 13px; font-size: 80%;">Other contributing factors</li>
+                    <ul style="font-size: 70%;">
+                      <li>Disciplinary practices and norms</li>
+                      <li>Amount of data in hand (age)</li>
+                      <li>Problematic metadata standards</li>
+                      <li>Difficulty understanding legal issues</li>
+                      <li>Lack of trust in <i>digital</i> formats (paper!)</li>
+                      <li>Heard of FAIR data, but little deep knowledge</li>
+                    </ul>
+                  </ul>
+
+                </div>
+
+                <div style="float: left; max-width: 50%">
+                <div class="um-template-title" style="margin-bottom: 23px !important;">Global Data Sharing</div>
+                  <img src="common/assets/img/2014_SL_Neuro_Cartoon.jpg" style="margin-top: 35px; max-width: 400px;">
+                  <div class="um-template-citation" style="line-height: 110%; font-size: 50% !important;">
+                    <a href="http://www.kavlifoundation.org/science-spotlights/breaking-down-data-barriers-neuroscience">http://www.kavlifoundation.org/science-spotlights/breaking-down-data-barriers-neuroscience</a>
+                  </div>
+                </div>
+
+                <div style="position: absolute; top: 53px; left: -180px; max-width: 330px; text-align: right; font-size: 58%; line-height: normal; background-color: #fff; padding: 13px;"><i>“Sharing data from one laboratory to another—or even within a laboratory—takes time and effort, but there are also psychological, cultural and technological barriers to doing so." (Credit: Ainsley Seago, PLoS Biology)</i></div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            <ul>
+              <li>Tenopir, C., Allard, S., Douglass, K., Aydinoglu, A. U., Wu, L., Read, E., Manoff, M., Frame, M. (2011). Data Sharing by Scientists: Practices and Perceptions. PLoS ONE, 6(6). DOI: <a href="https://doi.org/10.1371/journal.pone.0021101">10.1371/journal.pone.0021101</a></li>
+              <li>Tenopir, C., Dalton, E. D., Allard, S., Frame, M., Pjesivac, I., Birch, B., Pollock, D. and Dorsett, K. (2015). Changes in Data Sharing and Data Reuse Practices and Perceptions among Scientists Worldwide. PLoS ONE, 10(8), e0134826. doi: <a href="https://doi.org/10.1371/journal.pone.0134826">10.1371/journal.pone.0134826</a>.</li>
+            </ul>
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section> -->
+
+      <!-- ***
+            * Springer Nature Map
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+              <div class="um-template-title" style="margin-bottom: 23px !important;">Why Researchers Have a Hard Time Sharing</div>
+              <div style="text-align: center;">
+                <img src="common/assets/img/2018_SpringerNature_map.jpg" style="max-width: 85%;">
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            Stuart, D., G. Baynes, I. Hrynaszkiewicz, K. Allin, D. Penny, M. Lucraft, and M. Astell (2018). Research Data: Practical Challenges for Researchers in Sharing Data. <i>Springer Nature</i>. DOI: <a href="https://doi.org/10.6084/m9.figshare.5975011/" target="_blank">10.6084/m9.figshare.5975011</a>.
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+        </div>
+        <div class="fragment" style="position: absolute; top: 150px; text-align: left; font-size: 80%; width: 100%;">
+
+            <div class="um-template-element" style="font-size: 90%; background-color: rgba(255,255,255,0.85); padding: 100px; max-width: 50%">
+              <ul style="list-style: none; margin: 0px auto 0px auto !important;">
+                <li>46% - <i>Organising Data in a Presentable and Useful Way</i></li>
+                <li>37% - <i>Unsure About Copyright and Licensing</i></li>
+                <li>33% - <i>Not Sure Which Repository to Use</i></li>
+                <li>26% - <i>Lack of Time to Share</i></li>
+                <li>19% - <i>Cost of Sharing is too High</i></li>
+              </ul>
+            </div>
+
+        </div>
+      </section>
+
+      <!-- ***
+            * Important Curation Activities Graph
+            * -->
+      <!-- <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+
+              <div class="um-template-title">DCN Researcher Study 2018 (n=91)</div>
+              <div style="width: 90%;">
+                <canvas data-chart="bar" height=420 width=1000> -->        
+                  <!--
+                   {
+                   "data": {
+                    "labels": ["1.0 - 1.5","1.5 - 2.0","2.0 - 2.5","2.5 - 3.0","3.0 - 3.5","3.5 - 4.0","4.0 - 4.5", "4.5 - 5.0"],
+                    "datasets": [
+                     {
+                      "data": [0,0,0,4,9,12,8,2],
+                      "label": "DC Activities",
+                      "borderColor": "#222",
+                      "backgroundColor":"#ddd",
+                      "borderWidth": 1
+                     }
+                    ]
+                   },
+                   "options": { 
+                    "responsive": "true", 
+                    "mantainAspectRatio": "false",
+                    "title": { 
+                     "display": "true",
+                     "fontSize": 24,
+                     "fontColor": "#222",
+                     "text": "Data Curation Activities: Average Researcher Ratings of Importance", 
+                     "padding": 30
+                    }, 
+                    "legend": { 
+                     "position": "bottom", 
+                     "labels": { 
+                       "boxWidth": 13,
+                       "fontSize": 16
+                      }
+                     },
+                     "tooltips": {
+                     "labels": { "fontColor": "#333" }
+                    },
+                      "scales": {
+                       "yAxes": [{
+                        "id": "y-axis-1",
+                        "display": "true",
+                        "position": "left",
+                        "gridLines": {
+                         "color": "#fff",
+                         "zeroLineColor": "#222"
+                        },
+                        "ticks": {
+                         "fontSize": 16
+                        },
+                        "scaleLabel": {
+                         "display": "true",
+                         "labelString": "Count of DC Activities (n=35)",
+                         "fontColor": "#222",
+                         "fontSize": 16
+                        }
+                       }],
+                       "xAxes": [{
+                        "id": "x-axis-1",
+                        "display": "true",
+                        "gridLines": {
+                         "color": "#fff",
+                         "zeroLineColor": "#222"
+                        },
+                        "ticks": {
+                         "fontSize": 16
+                        }
+                       }]
+                      } 
+                     }
+                    }
+                  -->
+                <!-- </canvas>
+              </div> -->
+              <!-- <img src="common/assets/img/curationimportant.png"> -->
+
+            <!-- </div>
+
+          </div>
+
+          <div class="um-template-citation">
+              Johnston, L. R., Carlson, J., Hudson-Vitale, C., Imker, H., Kozlowski, W., Olendorf, R., & Stewart, C. (2018). How Important is Data Curation? Gaps and Opportunities for Academic Libraries. Journal of Librarianship and Scholarly Communication, 6(1), eP2198. DOI: <a href="https://doi.org/10.7710/2162-3309.2198">https://doi.org/10.7710/2162-3309.2198</a>
+          </div>
+
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+       <div style="position: absolute; top: 355px; right: 120px; color: red; font-size: 60%" class="fragment" data-fragment-index=1>Documentation<br>
+        Chain of custody<br>
+        <object data="common/assets/svg/arrow_up_left.svg" type="image/svg+xml" style="margin-left: -200px; margin-top: 9px;"></object>
+       </div>
+       <div style="position: absolute; top: 247px; left: 330px; color: brown; font-size: 60%; text-align: left;" class="fragment" data-fragment-index=1 >
+        Emulation<br>
+        Restricted Access<br>
+        Contact Information<br>
+        Full-Text Indexing<br>
+        <object data="common/assets/svg/arrow_right_down.svg" type="image/svg+xml" style="margin-left:120px; margin-top: -30px;"></object>
+       </div>
+      </section> -->
+
+      <!-- ***
+            * Researcher response #1
+            * -->
+      <!-- <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+
+              <div style="display: inline-block; text-align: left; font-size: 90%; width: 100% !important">
+
+                <div class="um-template-title">DCN Researcher Study 2016 (n=91)</div>
+
+                <div style="float: left; width: 40%">
+                  <div class="um-template-element" style="font-size: 80%;">
+                    Most Important Activities* (4 out of 5)<br>
+                    <ul style="font-size: 90%;">
+                      <li>(Create) Documentation (4.6)</li>
+                      <li>Secure Storage (4.4)</li>
+                      <li>Quality Assurance (4.3)</li>
+                      <li>Persistent Identifier (4.3)</li>
+                      <li>Software Registry (4.1)</li>
+                      <li>Data Visualization (4.0)</li>
+                      <li>File Audit (4.0)</li>
+                      <li>(Create) Metadata (4.0)</li>
+                      <li>Versioning (3.9)</li>
+                      <li>Contextualization (3.9)</li>
+                      <li>Code Review (3.9)</li>
+                      <li>File Format Transformations (3.9)</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div style="float: right; width: 55%; font-size: 75%; line-height: normal !important; margin-left: 5%;">
+                  <div style="border: 1pt white solid; border-radius: 5px; background-color: #fff; padding: 13px; color: #fff">
+                    Not Happening for Majority of Researchers<br>
+                    <ul style="font-size: 90%;">
+                      <li>Persistent Identifier (37% happens)</li>
+                      <li>Software Registry (41% happens)</li>
+                      <li>File Audit (16% happens)</li>
+                      <li>Contextualization (38% happens)</li>
+                      <li>Code Review (38% happens)</li>
+                    </ul>
+                  </div>
+                  <div style="margin-top: 23px; border: 1pt white solid; border-radius: 5px; background-color: #fff; color: #fff; padding: 13px;">
+                    Happening, but not satisfactorily<br>
+                    <ul style="font-size: 90%;">
+                      <li>Documentation (26% satisfied)</li>
+                      <li>Secure storage (38% satisfied)</li>
+                      <li>Quality Assurance (14% satisfied)</li>
+                      <li>Data Visualization (12.5% satisfied)</li>
+                      <li>Metadata (29% satisfied)</li>
+                      <li>Versioning (13% Satisfied)</li>
+                      <li>File Format Transformations (29% satisfied)</li>
+                    <ul>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            Johnston, L. R., Carlson, J., Hudson-Vitale, C., Imker, H., Kozlowski, W., Olendorf, R., & Stewart, C. (2018). How Important is Data Curation? Gaps and Opportunities for Academic Libraries. Journal of Librarianship and Scholarly Communication, 6(1), eP2198. DOI: <a href="https://doi.org/10.7710/2162-3309.2198">https://doi.org/10.7710/2162-3309.2198</a>
+          </div>
+
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section> -->
+
+
+      <!-- ***
+            * Researcher response #2
+            * -->
+      <!-- <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+
+              <div style="display: inline-block; text-align: left; font-size: 90%; width: 100% !important">
+
+                <div class="um-template-title">DCN Researcher Study 2016 (n=91)</div>
+
+                <div style="float: left; width: 40%">
+                  <div class="um-template-element" style="font-size: 80%;">
+                    Most Important Activities* (4 out of 5)<br>
+                    <ul style="font-size: 90%;">
+                      <li>(Create) Documentation (4.6)</li>
+                      <li>Secure Storage (4.4)</li>
+                      <li>Quality Assurance (4.3)</li>
+                      <li style="color: #f61;">Persistent Identifier (4.3)</li>
+                      <li style="color: #f61;">Software Registry (4.1)</li>
+                      <li>Data Visualization (4.0)</li>
+                      <li style="color: #f61;">File Audit (4.0)</li>
+                      <li>(Create) Metadata (4.0)</li>
+                      <li>Versioning (3.9)</li>
+                      <li style="color: #f61;">Contextualization (3.9)</li>
+                      <li style="color: #f61;">Code Review (3.9)</li>
+                      <li>File Format Transformations (3.9)</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div style="float: right; width: 55%; font-size: 75%; line-height: normal !important; margin-left: 5%;">
+                  <div style="border: 1pt black solid; border-radius: 5px; background-color: #fdc; padding: 13px">
+                    Not Happening for Majority of Researchers<br>
+                    <ul style="font-size: 90%;">
+                      <li>Persistent Identifier (37% happens)</li>
+                      <li>Software Registry (41% happens)</li>
+                      <li>File Audit (16% happens)</li>
+                      <li>Contextualization (38% happens)</li>
+                      <li>Code Review (38% happens)</li>
+                    </ul>
+                  </div>
+                  <div style="margin-top: 23px; border: 1pt white solid; border-radius: 5px; background-color: #fff; color: #fff; padding: 13px;">
+                    Happening, but not satisfactorily<br>
+                    <ul style="font-size: 90%;">
+                      <li>Documentation (26% satisfied)</li>
+                      <li>Secure storage (38% satisfied)</li>
+                      <li>Quality Assurance (14% satisfied)</li>
+                      <li>Data Visualization (12.5% satisfied)</li>
+                      <li>Metadata (29% satisfied)</li>
+                      <li>Versioning (13% Satisfied)</li>
+                      <li>File Format Transformations (29% satisfied)</li>
+                    <ul>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            Johnston, L. R., Carlson, J., Hudson-Vitale, C., Imker, H., Kozlowski, W., Olendorf, R., & Stewart, C. (2018). How Important is Data Curation? Gaps and Opportunities for Academic Libraries. Journal of Librarianship and Scholarly Communication, 6(1), eP2198. DOI: <a href="https://doi.org/10.7710/2162-3309.2198">https://doi.org/10.7710/2162-3309.2198</a>
+          </div>
+
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section> -->
+
+
+      <!-- ***
+            * Researcher response #3
+            * -->
+      <!-- <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+
+              <div style="display: inline-block; text-align: left; font-size: 90%; width: 100% !important">
+
+                <div class="um-template-title">DCN Researcher Study 2016 (n=91)</div>
+
+                <div style="float: left; width: 40%">
+                  <div class="um-template-element" style="font-size: 80%;">
+                    Most Important Activities* (4 out of 5)<br>
+                    <ul style="font-size: 90%;">
+                      <li style="color: #f61;">(Create) Documentation (4.6)</li>
+                      <li style="color: #f61;">Secure Storage (4.4)</li>
+                      <li style="color: #f61;">Quality Assurance (4.3)</li>
+                      <li>Persistent Identifier (4.3)</li>
+                      <li>Software Registry (4.1)</li>
+                      <li style="color: #f61;">Data Visualization (4.0)</li>
+                      <li>File Audit (4.0)</li>
+                      <li style="color: #f61;">(Create) Metadata (4.0)</li>
+                      <li style="color: #f61;">Versioning (3.9)</li>
+                      <li>Contextualization (3.9)</li>
+                      <li>Code Review (3.9)</li>
+                      <li style="color: #f61;">File Format Transformations (3.9)</li>
+                    </ul>
+                  </div>
+                </div>
+
+                <div style="float: right; width: 55%; font-size: 75%; line-height: normal !important; margin-left: 5%;">
+                  <div style="border: 1pt black solid; border-radius: 5px; background-color: #ddd; padding: 13px">
+                    Not Happening for Majority of Researchers<br>
+                    <ul style="font-size: 90%;">
+                      <li>Persistent Identifier (37% happens)</li>
+                      <li>Software Registry (41% happens)</li>
+                      <li>File Audit (16% happens)</li>
+                      <li>Contextualization (38% happens)</li>
+                      <li>Code Review (38% happens)</li>
+                    </ul>
+                  </div>
+                  <div style="margin-top: 23px; border: 1pt black solid; border-radius: 5px; background-color: #fdc; padding: 13px">
+                    Happening, but not satisfactorily<br>
+                    <ul style="font-size: 90%;">
+                      <li>Documentation (26% satisfied)</li>
+                      <li>Secure storage (38% satisfied)</li>
+                      <li>Quality Assurance (14% satisfied)</li>
+                      <li>Data Visualization (12.5% satisfied)</li>
+                      <li>Metadata (29% satisfied)</li>
+                      <li>Versioning (13% Satisfied)</li>
+                      <li>File Format Transformations (29% satisfied)</li>
+                    <ul>
+                  </div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            Johnston, L. R., Carlson, J., Hudson-Vitale, C., Imker, H., Kozlowski, W., Olendorf, R., & Stewart, C. (2018). How Important is Data Curation? Gaps and Opportunities for Academic Libraries. Journal of Librarianship and Scholarly Communication, 6(1), eP2198. DOI: <a href="https://doi.org/10.7710/2162-3309.2198">https://doi.org/10.7710/2162-3309.2198</a>
+          </div>
+
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section> -->
+
+      <!-- ***
+            * Data Curation Network Services
+            * -->
+      <!-- <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Tangible Actions</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="max-width: 95% !important;">
+
+              <div class="um-template-title">Data Curation Network - Mnemonic for Curation</div>
+              <div class="um-template-element" style="font-size: 85%;">
+                <div style="text-align: left; margin: 0px auto 0px auto !important; display: inline-block; line-height: 200%">
+                  <span style="font-size: 180%; font-weight: bold; margin-right: 42px; vertical-align: -6px;">C</span><b>Check</b><span style="color: #999;"> files and read documentation </span><span style="margin-left: 23px; color: #999; font-size: 90%;">(risk mitigation, file inventory, appraisal/selection)</span><br>
+                  <span style="font-size: 180%; font-weight: bold; margin-right: 42px; vertical-align: -6px;">U</span><b>Understand</b><span style="color: #999;"> the data, or try to ... </span><span style="margin-left: 23px; color: #999; font-size: 90%;">(run files/environment, QA/QC issues, readmes)</span><br>
+                  <span style="font-size: 180%; font-weight: bold; margin-right: 42px; vertical-align: -6px;">R</span><b>Request</b><span style="color: #999;"> missing information or changes </span><span style="margin-left: 23px; color: #999; font-size: 90%;">(tracking provenance of processes and changes)</span><br>
+                  <span style="font-size: 180%; font-weight: bold; margin-right: 42px; vertical-align: -6px;">A</span><b>Augment</b><span style="color: #999;"> metadata for findability </span><span style="margin-left: 23px; color: #999; font-size: 90%;">(DOIs, metadata standards, discoverability)</span><br>
+                  <span style="font-size: 180%; font-weight: bold; margin-right: 42px; vertical-align: -6px;">T</span><b>Transform</b><span style="color: #999;"> file formats for reuse </span><span style="margin-left: 23px; color: #999; font-size: 90%;">(data preservation, conversion tools, data viz)</span><br>
+                  <span style="font-size: 180%; font-weight: bold; margin-right: 42px; vertical-align: -6px;">E</span><b>Evaluate</b><span style="color: #999;"> for FAIRness </span><span style="margin-left: 23px; color: #999; font-size: 90%;">(licenses, responsibility standarads, metrics for tracking)</span><br>
+                  <span style="font-size: 180%; font-weight: bold; margin-right: 42px; vertical-align: -6px;">D</span><b>Document</b><span style="color: #999;"> the curation process</span>
+                </div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            Data Curation Network (2018). "Checklist of CURATED Steps Performed by the Data Curation Network." <a href="https://datacurationnetowrk.org" target="_blank">https://datacurationnetowrk.org</a>
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section> -->
+
+      <!-- ***
+            *  Fair Data
+            * -->
+      <!-- <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Tangible Actions</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+
+              <div style="display: inline-block; text-align: left; font-size: 90%; width: 100%">
+
+                <div style="float: left;">
+                  <div class="um-template-title" style="margin-bottom: 23px !important;">FAIR Data</div>
+                  <div class="um-template-element" style="font-size: 80%;">
+                    <div style="text-align: left; margin: 0px auto 0px auto !important; display: inline-block; line-height: 200%">
+                      <span style="font-size: 180%; font-weight: bold; margin-right: 42px; vertical-align: -6px;">F</span><b>Findable</b> <span style="margin-left: 23px; color: #999; font-size: 90%;">rich metadata with assigned DOI</span><br>
+                      <span style="font-size: 180%; font-weight: bold; margin-right: 42px; vertical-align: -6px;">A</span><b>Accessible</b> <span style="margin-left: 23px; color: #999; font-size: 90%;">Metadata and data available across open protocols</span><br>
+                      <span style="font-size: 180%; font-weight: bold; margin-right: 42px; vertical-align: -6px;">I</span><b>Interoperable</b> <span style="margin-left: 23px; color: #999; font-size: 90%;">Data and metadata represented with standard or easily understood data structures</span><br>
+                      <span style="font-size: 180%; font-weight: bold; margin-right: 42px; vertical-align: -6px;">R</span><b>Reusable</b> <span style="margin-left: 23px; color: #999; font-size: 90%;">metadata includes provenance and uses community accepted descriptions</span><br>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+
+              <div style="margin-top: 15px !important; font-size: 50%; line-height: 115% !important; text-align: left; color: #aaa;">
+                <img src="common/assets/img/603334-digital-world_hz.jpg">
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            Wilkinson, M. D., M. Dumontier, I. J. Aalbersberg, G. Appleton, M. Axton, A. Baak, N. Blomberg, J.-W. Boiten, L. B. da Silva Santos, P. E. Bourne, J. Bouwman, A. J. Brookes, T. Clark, M. Crosas, I. Dillo, O. Dumon, S. Edmunds, C. T. Evelo, R. Finkers, A. Gonzalez-Beltran, A. J. G. Gray, P. Groth, C. Goble, J. S. Grethe, J. Heringa, P. A. C. ’t Hoen, R. Hooft, T. Kuhn, R. Kok, J. Kok, S. J. Lusher, M. E. Martone, A. Mons, A. L. Packer, B. Persson, P. Rocca-Serra, M. Roos, R. van Schaik, S.-A. Sansone, E. Schultes, T. Sengstag, T. Slater, G. Strawn, M. A. Swertz, M. Thompson, J. van der Lei, E. van Mulligen, J. Velterop, A. Waagmeester, P. Wittenburg, K. Wolstencroft, J. Zhao and B. Mons (2016). The FAIR Guiding Principles for scientific data management and stewardship. <i>Scientific Data</i>, 3, 160018. doi: <a href="https://doi.org/10.1038/sdata.2016.18">10.1038/sdata.2016.18</a>.
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section> -->
+
+      <!-- ***
+            * Back on Track (outline)
+            * -->
+      <section data-transition="fade" data-background-image="common/assets/img/WhereAreWeGoingIDSCBG.jpg">
+        <div style="margin-left: 50px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;">What is Data Science<br>&nbsp;&nbsp;&<br>&nbsp;&nbsp;&nbsp;What is a Data Scientist?</div>
+          <div style="margin-bottom: 200px; font-size: 90%; margin-left: 23px;">
+            <ul>
+                <li style="color: #aaa;"><i>Beginnings</i></li>
+                <li style="color: #aaa;"><i>Data Curation</i></li>
+                <li><b><i>A Few Examples</i></b></li>
+                <li style="color: #aaa;"><i>A Political Economy of Data</i></li>
+                <li style="color: #aaa;"><i>Some Time for Questions and Discussion</i></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***
+            * Some Examples
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Some Examples</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter" style="margin-top: 50px !important;">
+
+            <div class="um-template-content" style="max-width: 95% !important;">
+
+              <div class="um-template-title">Embedded Data Curation</div>
+              <div style="display: inline-block; text-align: left; font-size: 90%; width: 100%">
+
+                <div style="float: right; max-width: 70%;">
+                  <div>
+                    <ul style="list-style: none;">
+                      <li>UM Libraries</li>
+                      <ul style="font-size: 70%;">
+                        <li style="line-height: normal !important; margin-bottom: 13px;"><i><b>Hometown Maps</b> <span style="font-size: 90%; color: #888;">(SOA with Gilda Santana and Abe Parrish)</span></i><br><a style="color: #aaa; font-size: 90%" href="https://scholar.library.miami.edu/hometownmaps/">https://scholar.library.miami.edu/hometownmaps/</a></li>
+                        <li style="line-height: normal !important; margin-bottom: 7px;"><i><b>Measures Library</b> <span style="font-size: 90%; color: #888;">(SOHNS with Victoria Mitrani and Vera Spika)</span></i><br><a style="color: #aaa; font-size: 90%"  href="https://elcentro.sonhs.miami.edu/research/measures-library/index.html">https://elcentro.sonhs.miami.edu/research/measures-library/index.html</a></li>
+                        <li><i><b>Antillean Visions</b> <span style="font-size: 90%; color: #888;">(Lowe Art Museum with Will Pestle, Ashlie White among others)</span></i></li>
+                      </ul>
+                      <li style="margin-top: 23px;">Center for Computational Science</li>
+                      <ul style="font-size: 70%;">
+                        <li><i><b>Pulley Ridge</b> <span style="font-size: 90%; color: #888;">(RSMAS with Peter Ortner, Chris Mader among others)</span></i></li>
+                        <li><i><b>The Turtlebox Project</b> <span style="font-size: 90%; color: #888;">(NOAA with Paul Richards, Chris Mader among others)</span></i></li>
+                        <li><i><b>Las Flores Participatory Mapping</b> <span style="font-size: 90%; color: #888;">(SOA with Chris Mader, Adib Cure, Carie Penebad among others)</span></i></li>
+                      </ul>
+                    </ul>
+                  </div>
+                </div>
+
+                <div style="float: left; max-width: 35%;">
+                  <img src="common/assets/img/arc51000002750001001.jpg" style="max-width: 100% !important; margin-top: -60px; margin-left: 23px;">
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- <div class="um-template-citation">
+              <a href="#" target="_blank">Source reference</a>
+          </div> -->
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            * Pulley Ridge
+            * -->
+      <section section data-background-image="common/assets/img/pr_cover.jpg" data-transition="fade">
+        <div class="um-template-title" style="margin-bottom: 23px !important; color: #caedff; text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e;">Pulley Ridge Data Curation Experience</div>
+        <div style="width: 75%; margin: 0px auto 0px auto; font-size: 70%; text-align: left; line-height: 120%; color: #caedff; text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e;">
+          "represents a collaboration of more than thirty scientists at ten different universities and two federal laboratories (NOAA’s Atlantic Oceanographic and Meteorological Laboratory and Southeast Fisheries Science Center) pooling their expertise through NOAA’s Cooperative Institute for Marine and Atmospheric Studies at the University of Miami in coordination with the Cooperative Institute for Ocean Exploration, Research, and Technology at Florida Atlantic University."
+        </div>
+        <div style="font-size: 50%; text-align: center; width: 100%; margin: 20px auto 350px auto; color: #caedff; text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e;">
+          NCCOS - Understanding Coral Ecosystem Connectivity in the Gulf of Mexico from Pulley Ridge to the Florida Keys - <a style="color: #caedff;" href="https://coastalscience.noaa.gov/project/coral-ecosystem-connectivity-gulf-florida-keys/" target="_blank">https://coastalscience.noaa.gov/project/coral-ecosystem-connectivity-gulf-florida-keys/</a><br>
+        </div>
+        <div style="font-size: 50%; text-align: center; width: 100%; margin: 0px auto 0px auto; color: #caedff; text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e;">
+          Pulley Ridge Decision Support Resource. <a style="color: #caedff;" href="https://mesophotic.ccs.miami.edu" target="_blank">https://mesophotic.ccs.miami.edu</a>.
+        </div>
+      </section>
+
+      <!-- ***
+            * Turtlebox
+            * -->
+      <section section data-background-image="common/assets/img/virtu.png" data-transition="fade">
+        <div class="um-template-title" style="margin-bottom: 23px !important; color: #ffedca; text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e;">VirTu - Sea Turtle Density Estimator</div>
+        <div style="font-size: 70%; text-align: center; width: 100%; margin: 0px auto 500px auto; color: #ffedca; text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e;">
+          <a style="color: #ffedca;" href="https://virtu.mesophotic.ccs.miami.edu" target="_blank">https://virtu.mesophotic.ccs.miami.edu</a>
+        </div>
+      </section>
+
+      <!-- ***
+            * Colombia
+            * -->
+      <section data-background-video="common/assets/video/LasFloresAnimation3cut.mp4" data-background-video-loop data-background-video-muted data-transition="fade" data-background-color="#000">
+        <div class="um-template-title" style="position: absolute; z-index: 10; top: 0px; left: 100px; margin: 0px; padding: 0px; color: #edffca; text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e;">Participatory Mapping: Las Flores, Barranquilla, Colombia</div>
+        <div style="position: absolute; z-index: 10; top: 480px; left: 100px; margin: 0px; padding: 0px; color: #edffca; font-size: 0.8em;text-shadow: 0px 0px 23px #152c4e, 0px 0px 23px #152c4e, 0px 0px 23px #152c4e; text-align: left;"><a href="https://mapeolasflores.ccs.miami.edu" target="_blank" style="color: #edffca;">https://mapeolasflores.ccs.miami.edu</a><br>point cloud: Chris Mader and Amin Sarafraz</div>
+      </section>
+
+      <!-- orthophotos -->
+      <section data-transition="slide none" data-background-image="common/assets/img/1200.jpg" data-background-size="120%">
+        <aside class="notes">
+          A composite image with perspective removed, called an orthophoto, is created from the model.
+        </aside>
+      </section>
+      <section data-transition="slide none" data-background-image="common/assets/img/600.jpg" data-background-size="120%"></section>
+      <section data-transition="slide none" data-background-image="common/assets/img/200.jpg" data-background-size="120%"></section>
+      <section data-transition="slide none" data-background-image="common/assets/img/100.jpg" data-background-size="120%"></section>
+
+      <!-- Survey workshops -->
+      <section data-transition="slide none" data-background-image="common/assets/img/photo--4.jpg"></section>
+      <section data-background-image="common/assets/img/P1040218.JPG" data-transition="slide none"></section>
+      <section data-background-image="common/assets/img/P1040215.JPG" data-transition="slide none"></section>
+      <section data-background-image="common/assets/img/20181026_LasFlores_foda.jpg" data-transition="slide none"></section>
+
+      <!-- Survey instrument -->
+      <section data-transition="slide none" data-background-image="common/assets/img/survey.png">
+        <div class="fragment center" data-fragment-index="0" style="padding: 13px; max-width: 60%; background-color: #000; opacity: 0.8; font-size: 80%; border-radius: 8px; color: #fff; margin-top: -23px;">
+          <table class="table-no-lines">
+            <tr><td colspan=2></td></tr>
+            <tr><td colspan=2>6 Pages</td></tr>
+            <tr><td colspan=2>81 Questions</td></tr>
+            <tr><td colspan=2>18 Observations</td></tr>
+            <tr class="smaller fragment" data-fragment-index="1"><td colspan=2><hr></td></tr>
+            <tr class="smaller fragment" data-fragment-index="1"><td>8</td><td>Information about the interviewee</td></tr>
+            <tr class="smaller fragment" data-fragment-index="1"><td>14</td><td>Building characteristics</td></tr>
+            <tr class="smaller fragment" data-fragment-index="1"><td>13</td><td>Socio-economic</td></tr>
+            <tr class="smaller fragment" data-fragment-index="1"><td>8</td><td>Services</td></tr>
+            <tr class="smaller fragment" data-fragment-index="1"><td>14</td><td>Community and culture</td></tr>
+            <tr class="smaller fragment" data-fragment-index="1"><td>10</td><td>Agricultural activities</td></tr>
+            <tr class="smaller fragment" data-fragment-index="1"><td>11</td><td>Environment</td></tr>
+            <tr class="smaller fragment" data-fragment-index="1"><td>18</td><td>Built environment (observations)</td></tr>
+            <tr><td colspan=2 class="fragment" data-fragment-index="2"><hr></td></tr>
+            <tr><td colspan=2 class="fragment" data-fragment-index="2">Signed Consent Form</td></tr>
+            <tr><td colspan=2 class="fragment" data-fragment-index="2"></td></tr>
+          </table>
+        </div>
+      </section>
+
+      <!-- GIS learning -->
+      <section data-transition="slide none" data-background-image="common/assets/img/photo--11.jpg"></section>
+      <section data-transition="slide none" data-background-image="common/assets/img/photo--15.jpg"></section>
+
+      <!-- Social Cartography -->
+      <section data-transition="slide none" data-background-image="common/assets/img/photo--7.jpg"></section>
+      <section data-transition="slide none" data-background-image="common/assets/img/photo--32.jpg"></section>
+      <section data-transition="slide none" data-background-image="common/assets/img/photo--34.jpg"></section>
+      <section data-transition="slide none" data-background-image="common/assets/img/photo--29.jpg"></section>
+      <section data-transition="slide none" data-background-image="common/assets/img/photo--22.jpg"></section>
+
+      <!-- Maps from social cartography -->
+      <section data-transition="slide none" data-background-color="#fff">       
+        <img src="common/assets/img/2018_OctSilueta_light.jpg" style="max-height: 880px; margin-top: -70px;">   
+      </section>
+      <section data-transition="slide none" data-background-color="#fff">       
+        <img src="common/assets/img/2018_OctThemed2_light.jpg" style="max-height: 840px; margin-top: -40px;">     
+      </section>
+      <section data-transition="slide none" data-background-color="#fff">       
+        <img src="common/assets/img/2018_OctColors_light.jpg" style="max-height: 850px; margin-top: -30px;">  
+      </section>
+
+      <!-- fishing map interviews -->
+      <!-- <section data-transition="slide none" data-background-image="common/assets/img/_MG_1782.JPG"></section>
+      <section data-transition="slide none" data-background-image="common/assets/img/2019_FebFishingLight.jpg"></section>
+      <section data-transition="slide none" data-background-color="#fff">       
+        <img src="common/assets/img/Pescadores_Final.jpg" style="max-height: 840px; margin-top: -40px;">  
+      </section> -->
+
+      <!-- interviews -->
+      <section data-transition="slide none" data-background-image="common/assets/img/IMG_1317.JPG"></section>
+      <section data-transition="slide none" data-background-image="common/assets/img/IMG_1385.JPG"></section>
+
+      <!-- census results -->
+      <section data-transition="slide none" data-background-image="common/assets/img/IMG_1338.JPG">
+        <p class="shadow-title highlight-text center fragment" style="width: 85%; margin-bottom: 350px">Summary of the Door to Door Survey</p>
+        <p class="highlight-text center fragment" style="width: 65%; margin-top: 0 !important; margin-bottom: 0 !important; font-size: 70%; color: #fff;">2578 buildings edited in the database (100%)</p>
+        <p class="highlight-text center fragment" style="width: 65%; font-size: 70%; margin-top: 0 !important; margin-bottom: 0 !important; color: #fff;">2414 buildings observed from the street (94%)</p>
+        <p class="highlight-text center fragment" style="width: 65%; font-size: 70%; margin-top: 0 !important; margin-bottom: 0 !important; color: #fff;">2338 buildings with complete survey instrument (91%)</p>
+        <p class="highlight-text center fragment" style="width: 65%; font-size: 70%; margin-top: 0 !important; margin-bottom: 0 !important; color: #fff;">2125 buildings with complete survey and signed consent form (82%)</p>
+      </section>
+
+      <!-- So many maps -->
+      <section data-transition="slide none" data-background-color="#fff">
+        <img src="common/assets/img/Multiples_Servicios.jpg" style="max-height: 840px; margin-top: -40px;">  
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff">       
+        <img src="common/assets/img/Multiples_Vivienda_Publica.jpg" style="max-height: 840px; margin-top: -40px;">  
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff">       
+        <img src="common/assets/img/Multiples_Materiales.jpg" style="max-height: 840px; margin-top: -40px;">  
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff">       
+        <img src="common/assets/img/historia-02.jpg" style="max-height: 840px; margin-top: -40px;">  
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff">       
+        <img src="common/assets/img/carta_turismo_map.jpg" style="max-height: 840px; margin-top: -40px;">  
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff"> 
+        <img src="common/assets/img/inundaciones.jpg" style="max-height: 840px; margin-top: -40px;">        
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff">       
+        <img src="common/assets/img/res_empleo_informal.jpg" style="max-height: 840px; margin-top: -40px;">  
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff">       
+        <img src="common/assets/img/res_seguro.jpg" style="max-height: 840px; margin-top: -40px;">  
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff">       
+        <img src="common/assets/img/res_aire.jpg" style="max-height: 840px; margin-top: -40px;">  
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff">       
+        <img src="common/assets/img/res_agu_sonido.jpg" style="max-height: 840px; margin-top: -40px;">  
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff"> 
+        <img src="common/assets/img/res_agu_potable.jpg" style="max-height: 840px; margin-top: -40px;">        
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff"> 
+        <img src="common/assets/img/res_aguas_consumo.jpg" style="max-height: 840px; margin-top: -40px;">        
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff"> 
+        <img src="common/assets/img/ComodidadesGrafico.png" style="max-height: 840px; margin-top: -40px;">        
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff"> 
+        <img src="common/assets/img/CulturalGrafico.png" style="max-height: 840px; margin-top: -40px;">        
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff"> 
+        <img src="common/assets/img/RecreativosGrafico.png" style="max-height: 840px; margin-top: -40px;">        
+      </section>
+
+      <section data-transition="slide none" data-background-color="#fff"> 
+        <img src="common/assets/img/ComentariosGrafico.png" style="max-height: 840px; margin-top: -40px;">        
+      </section>
+
+      <section data-transition="slide none">
+        <div style="font-size: 800%; text-align: center;">!?</div>
+      </section>
+
+      <!-- ***
+            * Data Governance
+            * -->
+      <section data-transition="slide none" data-background-color="#fff"> 
+        <img src='common/assets/img/mesa.png' style="max-width: 500px; margin-left: -600px; border: 1px solid black !important;">
+        <div class="fragment" style="margin-top: -700px; position: relative; top: 100px; left: 700px; font-size: 0.6em; text-align: left; max-width: 600px;">
+          <p>Written charter co-drafted by community members, UM CCS and pro-bono lawyers from Tecnoglass</p>
+          <p>Data <strong>Ownership, Control, Access, Possession</strong></p>
+          <p>All data owned by FUMUJEM, except for orthographic images which are co-owned by FUMUJEM and UM CCS</p>
+          <p>
+            8 members of the board: <br>
+            <span style="margin-left: 23px;">- 4 from community</span><br>
+            <span style="margin-left: 23px;">- 2 from UM CCS  (UM has deciding vote)</span><br>
+            <span style="margin-left: 23px;">- 2 from Fundación Tecnoglass</span>
+          </p>
+          <p>
+            137 variables in census:<br>
+            <span style="margin-left: 23px;">- 63 are public</span><br>
+            <span style="margin-left: 23px;">- 62 restricted, and 12 internal</span></p>
+          <p>
+            All data sharing must be voted on by board (actas firmadas)<br>
+            <span style="margin-left: 23px;">- all data under Open DB licenses</span><br>
+            <span style="margin-left: 23px;">- all assets under CC licenses</span>
+          </p>
+        </div>     
+      </section>
+
+      <!-- ***
+            * XSAT
+            * -->
+      <!-- <section data-transition="fade">
+        <div style="position: absolute; left: -400px; top: -200px;">
+          <img src="common/assets/img/SARS-CoV-2_without_background.png" style="max-width: 900px;">
+        </div>
+        <div style="margin-left: 550px !important; margin-top: 0px; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;">XSAT</div>
+          <div style="text-align: left !important; font-size: 90%; padding-bottom: 23px;">eXperimental Situation Awareness Tool:<br>tracking the coronavirus</div>
+          <div style="margin-bottom: 200px; font-size: 85%; margin-left: 23px;">
+              <ul style="list-style: none;">
+                <li>Key components</li>
+                <ul style="font-size: 90%;">
+                  <li>COVID-19 Near Me</li>
+                  <li>Location of Emerging Clusters</li>
+                  <span style="margin-top: 13px;"><i>Global, regional and local scale</i></span>
+                </ul>
+                <li style="margin-top: 23px;">Previous work as building blocks</li>
+                <ul style="font-size: 90%;">
+                  <li><a href="https://land.ccs.miami.edu" target="_blank">https://land.ccs.miami.edu</a></li>
+                  <li><a href="https://map.ccs.miami.edu/housing/map" target="_blank">https://map.ccs.miami.edu/housing/map</a></li>
+                  <li><a href="https://mapeolasflores.ccs.miami.edu" target="_blank">https://mapeolasflores.ccs.miami.edu</a></li>
+                  <li><a href="https://healthtool.ccs.miami.edu" target="_blank">https://healthtool.ccs.miami.edu</a></li>
+                  <span style="margin-top: 13px;"><i>SOLR/Lucene, Postgres/PostGIS, Express, Angular, Leaflet, Node</i></li>
+                </ul>
+              </ul>
+          </div>
+        </div>
+
+        <div class="um-template-citation" style="max-width: 55%;">SARS-CoV-2_without_background.png (2020). Centers for Disease Control and Prevention's Public Health Image Library (PHIL), identification number #23312. Wikimedia Commons.
+        </div>
+      </section> -->
+
+      <!-- ***
+            * Ways Forward
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Some Examples</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="max-width: 85%; width: 85%;">
+              <div class="um-template-title">Lessons Learned and Food for Thought</div>
+              <div style="display: inline-block; width: 100%">
+                <ul style="font-size: 90%;">
+                  <li style="margin-bottom: 7px;" class="fragment">Data Sharing and Data Publication: interest is apparent!<br>
+                  <span style="font-size: 80%;">Great tools exist; UM libraries in cahoots with IDSC is developing more robust services.</span></li>
+                  <li style="margin-bottom: 23px;" class="fragment">Storytelling and Data Curation go together, much like curation in museums.<br>
+                  <span style="font-size: 80%;">Similar to other projects like Pulley Ridge experience (Norris and Mader 2019, in further reading, last slide).</span></li>
+                  <li style="margin-bottom: 7px;" class="fragment">Data does not tell stories, humans tell stories with data.<br>
+                  <span style="font-size: 80%;">Extreme care should be taken with curation of data. It is the stories we tell as scientists, reporters, and other interested parties that shape societal reaction.</span></li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            * GIS and Special Collections
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Some Examples</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+
+              <div style="display: inline-block; text-align: left; font-size: 90%; width: 100%">
+
+                <div style="float: left; max-width: 70%; margin-top: 42px;">
+                  <div class="um-template-title">GIS, Data Curation, and Storytelling</div>
+                  <div class="um-template-element">
+
+                    <ul style="font-size: 90%;">
+                      <li><i>Quality metadata</i></li>
+                      <li><i>Proper sharing licenses/agreements</i></li>
+                      <li><i>Interdisciplinary problem solving</i></li>
+                      <li><i>Synthetic analysis and visualization</i></li>
+                      <li><i>Relevant applied science</i></li>
+                    </ul>
+
+                    <div style="margin-top: 42px;">Indeed, a well constructed GIS is a <br><i><b>special collection</b></i> made purposefully to <br>curate <i><b> cartographic exhibits</b></i> with <br><i><b>dynamic geospatial data</b></i>.</div>
+
+                  </div>
+                </div>
+
+                <div style="float: right;">
+                  <div><img src="common/assets/img/paul2.jpg"></div>
+                  <div style="width: 350px; font-size: 50%; line-height: normal;">At the CCS visualization wall, Paul Richards of NOAA explains the relevance of modeling turtle distributions in the conext of oil spills in the Gulf of Mexico.</div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- <div class="um-template-citation">
+              
+          </div> -->
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            * Back on Track (outline)
+            * -->
+      <section data-transition="fade" data-background-image="common/assets/img/WhereAreWeGoingIDSCBG.jpg">
+        <div style="margin-left: 50px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;">What is Data Science<br>&nbsp;&nbsp;&<br>&nbsp;&nbsp;&nbsp;What is a Data Scientist?</div>
+          <div style="margin-bottom: 200px; font-size: 90%; margin-left: 23px;">
+            <ul>
+                <li style="color: #aaa;"><i>Beginnings</i></li>
+                <li style="color: #aaa;"><i>Data Curation</i></li>
+                <li style="color: #aaa;"><i>A Few Examples</i></b></li>
+                <li><b><i>A Political Economy of Data</i></b></li>
+                <li style="color: #aaa;"><i>Some Time for Questions and Discussion</i></li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ***
+            * Short and Long Term
+            * -->
+      <!-- <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Political Economy of Data</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter" style="max-width: 85%;">
+
+            <div class="um-template-content" style="max-width: 85%;">
+
+              <div style="display: inline-block; text-align: left; font-size: 90%; width: 100%">
+
+                <div style="float: left; max-width: 70%; margin-top: 42px;">
+                  <div class="um-template-title">Where should we be going?</div>
+                  <div class="um-template-element">
+
+                    <ul style="list-style: none;">
+                      <li>Short term / ongoing</li>
+                      <ul style="font-size: 75%;">
+                        <li><i>Build DM Web Presence</i></li>
+                        <li><i>Teaching Data Management</i></li>
+                        <li><i>Data Wrangling Consultations</i></li>
+                        <li><i>Moderated Data Deposits</i></li>
+                        <li><i>Embedded Data Curator</i></li>
+                      </ul>
+                      <li style="margin-top: 23px;">Long Term</li>
+                      <ul style="font-size: 75%;">
+                        <li>Repository Development<br>[ Esploro, postgres GIS Data Store ]</li>
+                        <li>Research Data Guidelines/Policy</li>
+                        <li>Big Data - HPC</li>
+                        <li>Point Clouds - Magic Leap</li>
+                        <li style="margin-top: 13px;">Data Exhibit Curation - ULINK</li>
+                      </ul>
+                    </ul>
+
+                  </div>
+                </div>
+
+                <div style="float: right;">
+                  <div style="float:left; margin-top: 42px;"><img src="common/assets/img/keidy.jpg"></div>
+                  <div style="width: 180px; font-size: 50%; line-height: normal; float: right; margin-top: 400px;">Maria, Andrea y Keidy en un taller de mapeo. Las Flores, Barranquilla Colombia, octubre 2018.</div>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div> -->
+
+          <!-- <div class="um-template-citation">
+              
+          </div> -->
+          
+          <!-- <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section> -->
+
+      <!-- ***
+            * Political Economy of Data
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Political Economy of Data</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+              <div class="um-template-title" style="margin-bottom: 72px !important;">Data Science</div>
+              <div class="um-template-element">
+                <div style="display: inline-block; font-size: 85%; text-align: left;">
+                  <div style="float: left;">Big Data Analytics<br>Data Visualization<br>Machine Learning<br>... and so on ...</div>
+                  <div style="float: left; font-size: 550%; margin: 55px 42px 0 42px; font-family: courier new">}</div>
+                  <div style="float: right; margin-top: 17px; font-size: 90%">UM Institute for Data Science and Computing<br>MPS in Data Science at UM<br>High Performance Computing</div>
+                </div>
+                <div style="display: inline-block; font-size: 85%; font-weight: bold; text-align: left; margin-top: 42px; margin-left: 0px;">
+                  <div class="fragment" style="float: left; margin-right: 23px"><span style="margin-left: 295px; font-size: 200%;">/</span><br>"Standard" Data Science</div>
+                  <div class="fragment"  style="float: right; margin-left: 83px"><span style="margin-left: 0px; font-size: 200%;">\</span><br>"Critical" Data Science</div>
+                </div> 
+              </div>
+            </div>
+
+          </div>
+
+          <!-- <div class="um-template-citation">
+              <a href="#" target="_blank">Source reference</a>
+          </div> -->
+          
+          <!-- <script>displayFooter(this);</script> -->
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Political Economy of Data</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+              <div class="um-template-title" style="margin-bottom: 72px !important;">Critical Data Science</div>
+              <div class="um-template-element" style="text-align: left;">
+                Critique is not a rejection of some practice or technology, but instead a careful interrogation of categories and assumptions used by certain approaches or technologies. It is in this vein that "critical GIS" should be understood (Crampton and Krugier, 2005).
+              </div>
+              <div class="um-template-element" style="text-align: left; padding-top: 42px;">
+                ... perhaps the same for a critical data science?
+              </div>
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+              <a href="#" target="_blank">Crampton, J. W., & Krygier, J. (2005). An Introduction to Critical Cartography. <i>ACME: An International Journal for Critical Geographies</i>, 4(1), 23.</a>
+          </div>
+          
+          <!-- <script>displayFooter(this);</script> -->
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            *  The Open Revolution
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Political Economy of Data</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content">
+
+              <div style="display: inline-block; text-align: left; font-size: 90%; width: 100%">
+
+                <div style="float: left; max-width: 60%">
+                  <div class="um-template-title">The Open Revolution</div>
+                  <div class="um-template-element">
+
+                    <div style="font-size: 80%;">
+                      "Will the digitial revolution give us digital dictatorships or digital democracies? Forget everything you think you know about the digital age. It's not about privacy, surveillance, AI, or blockchain -- it's all about ownership." (Pollock 2018, back cover)<br><br>
+                      "Today, in a digital age, who owns information owns the future." (Pollock 2018, p. 7)
+                    </div>
+
+                  </div>
+                </div>
+
+                <div style="float: right; max-width: 40%;">
+                  <img src="common/assets/img/open-revolution-cover.jpg">
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+              Pollock, R. (2018). <i>The Open Revolution</i>. A/E/T Press.
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            *  Reflections - Quotes
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Political Economy of Data</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="margin-bottom: 23px !important; font-size: 60%; text-align: left;">
+              "The benefts of sharing identified by researchers relate mainly to the impact of their work (i.e., combining data increases the validity and reproducibility of the research), research efficiency (i.e., saving time and costs), generation of new ideas and contributions to the field, and transparency and collaboration. These answers confirm previous findings that data sharing helps develop a democratic society ... enhances transparency ... allows for reproduction ... and unleashes the potential of data to solve complex societal problems ..." (Elsevier and CWTS 2017)
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            Elsevier and the Centre for Science and Technology Studies (CWTS) (2017). <i>Open Data: The Researcher Perspective</i>. Elseveier and CWTS. <a href="https://www.elsevier.com/about/open-science/research-data/open-data-report">https://www.elsevier.com/about/open-science/research-data/open-data-report</a>.
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            *  Reflections - Quotes
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Political Economy of Data</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="margin-bottom: 23px !important; font-size: 60%; text-align: left;">
+              "Moving forward, it is worth questioning the value of open data and data sharing. Given the possibility of unanticipated challenges, concerns, and potential impacts to the time available to scholars to conduct actual scientific research, is open data always a good thing?" (Tenopir et al 2015)
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            Tenopir, C., Dalton, E. D., Allard, S., Frame, M., Pjesivac, I., Birch, B., Pollock, D. and Dorsett, K. (2015). Changes in Data Sharing and Data Reuse Practices and Perceptions among Scientists Worldwide. PLoS ONE, 10(8), e0134826. doi: <a href="https://doi.org/10.1371/journal.pone.0134826">10.1371/journal.pone.0134826</a>.
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            *  Reflections - Quotes
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Political Economy of Data</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="margin-bottom: 23px !important; font-size: 60%; text-align: left;">
+              "It is very difficult to get open data to pay for itself because open data is almost a perfect example of a public good, a type of resource markets almost inevitably fail at supplying. And Yet despite public policy interest in open research data, nobody seems to know how to finance it, even at the level of the white house." (Kansa 2014)
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            Kansa, E. C. (2014). The Need to Humanize Open Science. In: Moore, S. A. (ed.) <i>Issues in Open Research Data</i>. Pp 31-58. London, Ubiquity Press. DOI: <a href="https:doi.org/10.5334/ban.c">10.5334/ban.c</a>.
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Political Economy of Data</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="margin-bottom: 23px !important; font-size: 60%; text-align: left;">
+              The rise of Digital Feudalism not only raises questions over who controls, owns and benefits from the value of data, it also raises ethical questions related to privacy, accuracy and accessibility. This, in turn, leads to questions around the rise of digital monopolies and the power imbalance that could create; as well as the resulting data asymmetry and its impact on the global society. It is essential that we advance the dialogue on developing ethical principles and solutions as a means to help address these issues.
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            Global Open Data for Agriculture and Health (GODAN). Ethical Dimensions of Feudalism in Digital Agriculture. Accessed on December 6 2020 from <a href="https://www.godan.info/news/ethical-dimensions-digital-feudalism-agriculture">https://www.godan.info/news/ethical-dimensions-digital-feudalism-agriculture</a>.
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            *  Reflections - Quotes
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Political Economy of Data</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="margin-bottom: 23px !important; font-size: 60%; text-align: left;">
+              "As the foregoing makes clear, establishing and maintaining information-sharing partnerships—much less data-sharing partnerships ... is not easy. In absence of active, ongoing efforts to tend communication and to open policy and legislative channels, the default position appears to be closure. As such, it is crucially important to build up formal sharing arrangements and joint data governance structures ... In terms of organizational structure, data partnerships entail co-governance of the data asset." (p6)
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            Bruhn, J. (2014). "Identifying Useful Approaches to the Governance of Indigenous Data." <i>The Governance of Indigenous Information</i> 5(2): Art. 5.
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            *  Reflections - Quotes
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Political Economy of Data</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="margin-bottom: 23px !important; font-size: 60%; text-align: left; width: 80%; max-width: 80%;">
+              <div class="um-template-title">Food for Thought</div>
+              <ul>
+                <li style="margin-bottom: 23px;">The Social Dilemma - does AI influence human behavior?<br>
+                  <a href="https://www.thesocialdilemma.com" target="_blank" style="font-size: 0.7em;">https://www.thesocialdilemma.com</a>
+                </li>
+                <li style="margin-bottom: 23px;">S&P - largest data broker on Wall Street?<br>
+                  <a href="https://www.wsj.com/articles/s-p-upgrades-itself-to-data-juggernaut-with-ihs-markit-deal-11606776035" target="_blank" style="font-size: 0.7em;">https://www.wsj.com/articles/s-p-upgrades-itself-to-data-juggernaut-with-ihs-markit-deal-11606776035</a>
+                </li>
+                <li>Porn Hub - third most visited site on the internet<br>
+                  <a href="https://www.nytimes.com/2020/12/04/opinion/sunday/pornhub-rape-trafficking.html" style="font-size: 0.7em;" target="_blank">https://www.nytimes.com/2020/12/04/opinion/sunday/pornhub-rape-trafficking.html</a>
+                </li>
+              </ul>
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            *  Reflections - Quotes
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Political Economy of Data</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-content-containter">
+
+            <div class="um-template-content" style="margin-bottom: 23px !important; font-size: 60%; text-align: left;">
+              "The information ethic in this critique is based upon explicitly acknowledging that information systems are human creations, not natural phenomena. It follows the same argument that the free market is a myth; better said, the so-called “invisible hand” of Adam Smith is subordinate to institutions created by humans. This does not deny the possibility of creating greener and friendlier information systems; instead it creates opportunities to emphasize the human role in these processes."
+            </div>
+
+          </div>
+
+          <div class="um-template-citation">
+            Norris, T., & Suomela, T. (2017). Information in the ecosystem: Against the “information ecosystem”. <i>First Monday</i>, 22(9). doi: <a href="https://doi.org/10.5210/fm.v22i9.6847">https://doi.org/10.5210/fm.v22i9.6847</a>.
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+      <!-- ***
+            *  Thanks
+            * -->
+      <section data-background-image="common/assets/img/WhereAreWeGoingIDSC.jpg">
+        <div style="margin-left: 70px !important; font-size: 80%; text-align: left;">
+          <div class="um-template-title" style="text-align: left !important;">Thanks!</div>
+          <div style="margin-bottom: 100px; font-size: 90%">
+            Timothy B Norris<br>
+            <a href="mailto:tnorris@miami.edu" style="color: black !important;">tnorris@miami.edu</a>
+          </div>
+          <div style="margin-bottom: 200px; width: 350px; font-size: 90%">
+            Coda: data curation is a human activity. There is no way to express gratitude to all of the people who have supported this work - you know who you are.
+          </div>
+        </div>
+      </section>
+
+      <!-- ***
+            *  Reading List
+            * -->
+      <section data-transition="fade">
+        <div class="um-template-container">
+          <div class="um-template-header"><span>Data Curation and Data Science</span><br><table width=100%><tr><td background="common/assets/img/grey_bar.jpg" width=100%></td></tr></table></div>
+          <div class="um-template-title" style="margin-bottom: 23px; flex: none;margin-top: 13px;">Further Reading</div>
+          <div class="um-template-content-containter" style="overflow-y: scroll; overlow-x: hidden; margin-bottom: 42px;">
+
+            <div style="max-width: 75%; margin: 0px auto 0px auto !important; max-width: 90%; font-size: 55%; line-height: 130%">
+              <ul>
+                <li>Bruhn, J. (2014). "Identifying Useful Approaches to the Governance of Indigenous Data." <i>The Governance of Indigenous Information</i> 5(2): Art. 5.</li>
+                <li>Data Curation Network (2018). "Checklist of CURATED Steps Performed by the Data Curation Network." <a href="https://datacurationnetowrk.org" target="_blank">https://datacurationnetowrk.org</a></li>
+                <li>Elsevier and the Centre for Science and Technology Studies (CWTS) (2017). <i>Open Data: The Researcher Perspective</i>. Elseveier and CWTS. <a href="https://www.elsevier.com/about/open-science/research-data/open-data-report">https://www.elsevier.com/about/open-science/research-data/open-data-report</a>.</li>
+                <li>Fecher B, Friesike S, Hebing M (2015) What Drives Academic Data Sharing? <i>PLoS ONE</i> 10(2): e0118053. <a href="https://doi.org/10.1371/journal.pone.0118053">10.1371/journal.pone.0118053</a></li>
+                <li>Kansa, E. C. (2014). The Need to Humanize Open Science. In: Moore, S. A. (ed.) <i>Issues in Open Research Data</i>. Pp 31-58. London, Ubiquity Press. DOI: <a href="https:doi.org/10.5334/ban.c">10.5334/ban.c</a>.</li>
+                <li>Kitchin, R. (2014). <i>The Data Revolution</i>. Washington DC: SAGE</li>
+                <li>Norris, T. and S. Shreeves (2017). <i>University of Miami Data Curation Initiative: Report and Recommendations</i>. University of Miami Libraries.</li>
+                <li>Pollock, R. (2018). <i>The Open Revolution</i>. A/E/T Press.</li>
+                <li>Stuart, D., G. Baynes, I. Hrynaszkiewicz, K. Allin, D. Penny, M. Lucraft, and M. Astell (2018). Research Data: Practical Challenges for Researchers in Sharing Data. <i>Springer Nature</i>. DOI: <a href="https://doi.org/10.6084/m9.figshare.5975011/" target="_blank">10.6084/m9.figshare.5975011</a>.</li>
+                <li>Tenopir, C., Allard, S., Douglass, K., Aydinoglu, A. U., Wu, L., Read, E., Manoff, M., Frame, M. (2011). Data Sharing by Scientists: Practices and Perceptions. PLoS ONE, 6(6). DOI: <a href="https://doi.org/10.1371/journal.pone.0021101">10.1371/journal.pone.0021101</a></li>
+                <li>Tenopir, C., Dalton, E. D., Allard, S., Frame, M., Pjesivac, I., Birch, B., Pollock, D. and Dorsett, K. (2015). Changes in Data Sharing and Data Reuse Practices and Perceptions among Scientists Worldwide. PLoS ONE, 10(8), e0134826. doi: <a href="https://doi.org/10.1371/journal.pone.0134826">10.1371/journal.pone.0134826</a>.</li>
+                <li>Tuan, Yi-Fu (1977). <i>Space and Place: The Perspective of Experience</i>. University of Minnesota Press, St. Paul.</li>
+                <li>University of Miami Faculty Manual 2020 - 2021. <a href="https://fs.miami.edu/_assets/pdf/facultysenate/Documents/FacultyManual.pdf">https://fs.miami.edu/_assets/pdf/facultysenate/Documents/FacultyManual.pdf</a></li>
+                <li>Weber, Max & Andreski, Stanislav (1983). <i>Max Weber on capitalism, bureaucracy, and religion : a selection of texts</i>, London ; Boston: Allen & Unwin.
+                <li>Whitmire, Amanda L. (2014). GRAD 521 Research Data Management Lectures. Oregon State University Libraries. <a target="_blank" href="http://figshare.com/articles/GRAD521_Research_Data_Management_Lectures/1003835">http://figshare.com/articles/GRAD521_Research_Data_Management_Lectures/1003835</a>.</li>
+                <li>Wilkinson, M. D., M. Dumontier, I. J. Aalbersberg, G. Appleton, M. Axton, A. Baak, N. Blomberg, J.-W. Boiten, L. B. da Silva Santos, P. E. Bourne, J. Bouwman, A. J. Brookes, T. Clark, M. Crosas, I. Dillo, O. Dumon, S. Edmunds, C. T. Evelo, R. Finkers, A. Gonzalez-Beltran, A. J. G. Gray, P. Groth, C. Goble, J. S. Grethe, J. Heringa, P. A. C. ’t Hoen, R. Hooft, T. Kuhn, R. Kok, J. Kok, S. J. Lusher, M. E. Martone, A. Mons, A. L. Packer, B. Persson, P. Rocca-Serra, M. Roos, R. van Schaik, S.-A. Sansone, E. Schultes, T. Sengstag, T. Slater, G. Strawn, M. A. Swertz, M. Thompson, J. van der Lei, E. van Mulligen, J. Velterop, A. Waagmeester, P. Wittenburg, K. Wolstencroft, J. Zhao and B. Mons (2016). The FAIR Guiding Principles for scientific data management and stewardship. <i>Scientific Data</i>, 3, 160018. doi: <a href="https://doi.org/10.1038/sdata.2016.18">10.1038/sdata.2016.18</a>.</li>
+              </ul>
+            </div>
+
+          </div>
+          
+          <div class="um-template-footer"><table width=100%><tr><td background="common/assets/img/UM.jpg" height=80 width=98></td><td background="common/assets/img/bar.jpg"></td><td width=60></td></tr></table></div>
+       </div>
+      </section>
+
+    </div>
+  </div>
+  <script src="common/java/reveal.js"></script>
+	<script src="common/java/notes.js"></script>
+  <script src="common/java/head.min.js"></script>
+  <script>
+    Reveal.initialize({
+        width: 1366, height: 768, margin: 0.05,
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        mouseWheel: false,
+        chart: {
+          defaults: { 
+            global: { 
+              defaultFontSize: 20,
+              title: { fontColor: "#333" }, 
+              legend: {
+                position: "top",
+                labels: { fontColor: "#333" },
+              },
+              tooltips: {
+                labels: { fontColor: "#333" },
+              },
+            }, 
+            scale: { 
+              scaleLabel: { fontColor: "#333" }, 
+              gridLines: { color: "#333", zeroLineColor: "#333" }, 
+              ticks: { fontColor: "#333" }, 
+            } 
+          },
+        },
+        dependencies: [
+            { src: 'common/java/Chart.min.js' },
+            { src: 'common/java/csv2chart.js' }
+        ] 
+    });
+  </script>
+</body>
+</html>
